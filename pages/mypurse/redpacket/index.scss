@@ -1,0 +1,99 @@
+@import '../../../node_modules/antd-mobile/lib/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/icon/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/pull-to-refresh/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/list-view/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/button/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/toast/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/modal/style/index.css';
+
+@import "../../../static/html/css/base.css";
+@import '../../../static/html/redpacket_list/index.css';
+
+$uiWidth:75px;
+
+@function pxToRem($px){
+  @return $px / $uiWidth * 1rem;
+}
+h1{
+    font-weight: normal
+}
+.redfont{
+    color: red;
+}
+.hide{
+    display: none!important;
+}
+.redpacket-box .redpacket-container .tab-content .red-list{
+    padding: 0!important;
+}
+.redpacket-box .redpacket-container .tab-content .red-list .red-list-item{
+    margin: 10px;
+}
+.text-center{
+    text-align: center;
+    padding: 20px 0;
+}
+.xxd-xl-btn{
+    margin-left: 0.1rem;
+}
+.redpacket-wrapper {
+    padding: 0 pxToRem(20px);
+    //-webkit-box-shadow: 0 1px 5px 0px #f7f7f8;
+    //-moz-box-shadow: 0 1px 5px 0px #f7f7f8;
+    //box-shadow: 0 1px 5px 0px #f7f7f8;
+    border-top: 1px solid #f7f7f8;
+    border-bottom: 1px solid #f7f7f8;
+    background: #ffffff;
+    line-height: 46px;
+    .tab-link {
+      float: left;
+      padding: 0 pxToRem(15px);
+      text-align: center;
+      &:last-child{
+          float: right;
+          color: #4389f5;
+          position: relative;
+          padding: 0 pxToRem(30px);
+          .redtype{
+              position: absolute;
+              right: 0;
+              display: block;
+              background: #fff;
+              padding: 0 pxToRem(30px);
+              z-index: 2;
+              box-shadow: 0 1px 1px #ccc;
+              li{
+                  line-height: 30px;
+                  color: #333;
+                  border-bottom: 1px solid #ddd;
+                  &:last-child{
+                      border-bottom: none;
+                  }
+              }
+          }
+      }
+      .am-icon{
+        vertical-align: sub;
+      }
+      a {
+        display: inline-block;
+        padding: pxToRem(32px) pxToRem(32px);
+        font-size: pxToRem(26px);
+        line-height: pxToRem(26px);
+        color: #000000;
+      }
+    }
+    .tab-link-act {
+      a {
+        border-bottom: 1px solid #4389f5;
+        color: #4389f5;
+      }
+    }
+    &:after{
+        content: '.';           
+        display: block;            
+        height: 0;            
+        visibility: hidden;            
+        clear: both; 
+    }
+}

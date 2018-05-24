@@ -1,0 +1,291 @@
+/*****************recharge page style start****************/
+$uiWidth: 75px;
+
+@function pxToRem($px) {
+  @return $px / $uiWidth * 1rem;
+}
+
+.recharge-box{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  .recharge-container{
+    position: absolute;
+    top:pxToRem(90px);;
+    left: 0;
+    right: 0;
+    bottom:0;
+    overflow: auto;
+    background: #ffffff;
+    font-weight: 200;
+    /*tab*/
+    .tab-wrapper{
+      .tab{
+        display: table;
+        width:100%;
+        border-top:1px solid #f7f7f8;
+        background: #ffffff;
+        .tab-link{
+          display: table-cell;
+          text-align: center;
+          font-size: pxToRem(28px);
+          a{
+            display: inline-block;
+            padding:pxToRem(31px) 0 pxToRem(21px);
+            color: #000000;
+          }
+        }
+        .tab-link-act{
+          a{
+            border-bottom:2px solid #3e7bf1;
+            color: #3e7bf1;
+          }
+        }
+      }
+
+    }
+    .tab-content{
+      padding:0 pxToRem(20px);
+      display: none;
+    }
+    .tab-content.block{
+      display: block;
+    }
+    /*快捷充值*/
+    .tab-content.quickly-recharge{
+      //padding:0 pxToRem(20px);
+      .recharge-tips{
+        padding:pxToRem(18px) 0 pxToRem(18px) pxToRem(24px);
+        color: #7e7e7e;
+        font-size: pxToRem(20px);;
+      }
+      .div-input-border{
+        margin-top:pxToRem(39px);
+        padding:pxToRem(27px);
+        border:2px solid #e7e7e7;
+        text-align: center;
+        input{
+          width:90%;
+          text-align: center;
+          font-size: pxToRem(24px);
+          font-weight: 200;
+        }
+      }
+      .div-btn{
+        margin-top:pxToRem(79px);
+      }
+      .reminder-txt{
+        padding:pxToRem(73px) 0 pxToRem(39px);
+        text-align: center;
+        color: #808080;
+        font-weight: 600;
+        .line{
+          display: inline-block;
+          vertical-align: middle;
+          width:pxToRem(102px);
+          height: 2px;;
+          margin:0 pxToRem(20px);
+          background: -webkit-linear-gradient(to right,#ffffff 20%, #b4b4b4);
+          background: -moz-linear-gradient(to right,#ffffff 20%, #b4b4b4);
+          background: -ms-linear-gradient(to right,#ffffff 20%, #b4b4b4);
+          background: -o-linear-gradient(to right,#ffffff 20%, #b4b4b4);
+          background: linear-gradient(to right,#ffffff 20%, #b4b4b4);
+        }
+        .toright-line{
+          background: -webkit-linear-gradient(to left,#ffffff 20%, #b4b4b4);
+          background: -moz-linear-gradient(to left,#ffffff 20%, #b4b4b4);
+          background: -ms-linear-gradient(to left,#ffffff 20%, #b4b4b4);
+          background: -o-linear-gradient(to left,#ffffff 20%, #b4b4b4);
+          background: linear-gradient(to left,#ffffff 20%, #b4b4b4);
+        }
+      }
+      .reminder-content{
+        font-size: pxToRem(24px);
+        line-height: pxToRem(40px);
+        color: #2b2b2b;
+      }
+
+    }
+
+    /*线下充值*/
+    .tab-content.offline-recharge{
+      padding-top:pxToRem(38px);
+      .content-tit{
+        padding:pxToRem(20px) 0;
+        font-size: pxToRem(24px);
+        font-weight: 600;
+        color: #808080;
+        .bold-line{
+          display: inline-block;
+          //width:pxToRem(5px);
+          height:pxToRem(24px);
+          //background: #3f9bff;
+          border-left: 5px solid #3f9bff;
+          vertical-align: middle;
+          margin-right:pxToRem(10px);
+        }
+      }
+      .bank-card-border{
+        margin-top:0;
+      }
+      .xxd-account-border{
+        margin:pxToRem(24px) 0 pxToRem(38px);
+        padding:pxToRem(20px) 0 pxToRem(20px) pxToRem(19px);
+        border: 2px solid #e7e7e7;
+        border-radius: 10px;
+        -webkit-box-shadow: 0 1px 5px 1px #f7f7f8;
+        -moz-box-shadow: 0 1px 5px 1px #f7f7f8;
+        box-shadow: 0 1px 5px 1px #f7f7f8;
+        font-size: pxToRem(24px);
+        color: #2b2b2b;
+      }
+      .explain-wrapper,.reminder-wrapper{
+        li{
+          color: #2b2b2b;
+          font-size: pxToRem(24px);
+        }
+      }
+      p.mg-38{
+        margin:pxToRem(38px) 0;
+      }
+      .padding-31{
+        padding:0 pxToRem(31px) pxToRem(40px);
+      }
+    }
+
+  }
+}
+
+.recharge-result-container{
+  background: #ffffff;
+  .recharge-result-top{
+    position: relative;
+    padding:pxToRem(135px) 0 pxToRem(180px);
+    .circle-box{
+      position: relative;
+      width:pxToRem(210px);
+      height:pxToRem(210px);
+      margin:0 auto;
+      text-align: center;
+      -webkit-border-radius: 50%;
+      -moz-border-radius:50%;
+      -ms-border-radius:50%;
+      border-radius:50%;
+      background: url("../recharge/imgs/success_circle.png") no-repeat center bottom;
+      background-size: 100%;
+      span{
+        position: absolute;
+        left:0;
+        bottom:pxToRem(31px);
+        width:100%;
+        font-size: pxToRem(26px);
+        color: #ffffff;
+      }
+    }
+    .circle-box.success-box{
+      background: url("../recharge/imgs/success_circle.png") no-repeat center bottom;
+      background-size: 100%;
+    }
+    .circle-box.fail-box{
+      background: url("../recharge/imgs/fail_circle.png") no-repeat center bottom;
+      background-size: 100%;
+    }
+    .wave-bg{
+      position: absolute;
+      width:100%;
+      height:pxToRem(250px);
+      background: url("../recharge/imgs/wave.png") no-repeat center bottom;
+      background-size: 100%;
+    }
+  }
+  .recharge-result-top.success-bg{
+    background: -webkit-linear-gradient(to right,#57bdff 20%, #367dff);
+    background: -moz-linear-gradient(to right,#57bdff 20%, #367dff);
+    background: -ms-linear-gradient(to right,#57bdff 20%, #367dff);
+    background: -o-linear-gradient(to right,#57bdff 20%, #367dff);
+    background: linear-gradient(to right,#57bdff 20%, #367dff);
+  }
+  .recharge-result-top.fail-bg{
+    background: -webkit-linear-gradient(to right,#ff8457 20%, #ff3739);
+    background: -moz-linear-gradient(to right,#ff8457 20%, #ff3739);
+    background: -ms-linear-gradient(to right,#ff8457 20%, #ff3739);
+    background: -o-linear-gradient(to right,#ff8457 20%, #ff3739);
+    background: linear-gradient(to right,#ff8457 20%, #ff3739);
+  }
+  .recharge-result-txt{
+    margin-top:pxToRem(50px);
+    text-align: center;
+    font-size: pxToRem(30px);
+    font-weight: 600;
+    background: -webkit-linear-gradient(to right, #57beff 30%, #367dff);
+    background: -moz-linear-gradient(to right, #57beff 30%, #367dff);
+    background: -ms-linear-gradient(to right, #57beff 30%, #367dff);
+    background: -o-linear-gradient(to right, #57beff 30%, #367dff);
+    background: linear-gradient(to right, #57beff 30%, #367dff);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    position: relative;
+    z-index: 2;
+  }
+  .recharge-result-txt.fail-txt{
+    background: -webkit-linear-gradient(to right,#ff8457 20%, #ff3739);
+    background: -moz-linear-gradient(to right,#ff8457 20%, #ff3739);
+    background: -ms-linear-gradient(to right,#ff8457 20%, #ff3739);
+    background: -o-linear-gradient(to right,#ff8457 20%, #ff3739);
+    background: linear-gradient(to right,#ff8457 20%, #ff3739);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+  }
+  .fail-tips{
+    margin-top: pxToRem(39px);
+    padding: 0 pxToRem(110px);
+    color: #8f8f8f;
+  }
+  .div-btn{
+    margin-top:pxToRem(148px);
+    padding:0 pxToRem(40px);
+    text-align: center;
+    display: none;
+    button{
+      padding:pxToRem(24px) pxToRem(101px);
+      border:1px solid #4389f5;
+      line-height: pxToRem(30px);
+      font-size: pxToRem(30px);
+      font-weight: 200;
+    }
+    button.onrecharge{
+      float: left;
+      background: #ffffff;
+      color: #4389f5;
+    }
+    button.investment{
+      float: right;
+      background: #4389f5;
+      color: #ffffff;
+    }
+  }
+  .fail-btn{
+    margin-top: pxToRem(48px);
+    button.onrecharge{
+      float: left;
+      background: #4389f5;
+      color: #ffffff;
+    }
+  }
+  .div-btn.block{
+    display: block;
+  }
+}
+
+
+

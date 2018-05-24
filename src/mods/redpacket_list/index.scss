@@ -1,0 +1,117 @@
+/*****************************我的红包列表 start***********************/
+$uiWidth: 75px;
+
+@function pxToRem($px) {
+  @return $px / $uiWidth * 1rem;
+}
+
+.redpacket-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  .redpacket-container {
+    //margin-top: pxToRem(10px);
+    //padding-bottom: pxToRem(8px);
+    background: #ffffff;
+    font-weight: 200;
+    .code-input{
+      padding:pxToRem(10px) pxToRem(20px);
+      background: #f9f9f9;
+      input{
+        width:75%;
+        border:1px solid #e8e8e8;
+        padding:pxToRem(10px) pxToRem(15px);
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;;
+      }
+      button{
+        width:auto;
+        margin-left:pxToRem(10px);
+        padding:pxToRem(13px) pxToRem(38px);
+        line-height: pxToRem(24px);
+        font-size: pxToRem(24px);
+      }
+    }
+    .main-tab {
+      border-top: 1px solid #f9f9f9;
+    }
+    
+  }
+}
+.tab-content {
+  background: #fff;
+  display: none;
+  .red-list{
+    .red-list-item {
+      position: relative;
+      padding: pxToRem(32px) pxToRem(28px) 0;
+      margin: pxToRem(40px) pxToRem(20px);
+      -webkit-box-shadow: 1px 1px 5px 1px rgba(221,221,221,0.5);
+      -moz-box-shadow: 1px 1px 5px 1px rgba(221,221,221,0.5);
+      box-shadow: 1px 1px 5px 1px rgba(221,221,221,0.5);
+      align-items: center;
+      color: #616161;
+      font-weight: 200;
+      overflow: hidden;
+      .item-left {
+        -webkit-flex: 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        line-height: pxToRem(40px);
+      }
+      .item-right {
+        text-align: center;
+      }
+      .red-packet {
+        font-size: pxToRem(38px);
+        font-weight: 600;
+        color: #ff2d4d;
+      }
+      .red-name{
+        color: #3a3a3a;
+        font-weight: 600;
+      }
+      .red-range{
+        border-top:1px dotted #d4d4d4;
+        margin-top:pxToRem(18px);
+        padding: pxToRem(15px) 0;
+        color: #d4d4d4;
+        word-break: break-all;
+        white-space: nowrap;
+      }
+    }
+  }
+  .red-list-item.overdue-red-list-wrapper,.red-list-item.used-list-wrapper {
+    color: #afafaf;
+    .red-name{
+      color: #acacac;
+    }
+    .red-packet {
+      color: #acacac;
+    }
+    .right-bg{
+      position: absolute;
+      right:pxToRem(30px);
+      bottom:0;
+      width:pxToRem(99px);
+      height:pxToRem(77px);
+      background: url("../redpacket_list/imgs/overdue_icon@3x.png") no-repeat;
+      background-size: cover;
+    }
+  }
+  .red-list-item.used-list-wrapper{
+    .right-bg{
+      background: url("../redpacket_list/imgs/used_icon@3x.png") no-repeat;
+      background-size: cover;
+    }
+  }
+}
+.tab-content.block{
+  display: block;
+}
+
+/*****************************我的红包列表 end***********************/

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport"/>
+    <title>标的详情-自然人</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="../base.js"></script>
+</head>
+<body>
+<div class="product-box position-a">
+    <div class="common-header xxb-header">
+        <a href="#" class="arrow-left-icon header-left-arrow"></a>
+        <div class="common-header-tit">标的详情</div>
+    </div>
+    <div class="detail-container position-a">
+
+        <ul class="intro-list">
+            <li>
+                <p class="title"><span class="bold-line"></span>个人借款说明</p>
+                <div class="content description">
+                    <div class="target-status">
+                        <div class="wrapper">
+                            <canvas id="canvas" width="100" height="100" ></canvas>
+                            <!--百分比值-->
+                            <div class="percent">75%</div>
+                        </div>
+                        <span class="status-tips">还款中</span>
+                    </div>
+                    <div class="product-detail dis-flex-row">
+                        <div class="detail-li product-earnings">
+                            <p class="count">10%+3%</p>
+                            <p class="txt">历史年化收益</p>
+                        </div>
+                        <div class="detail-li">
+                            <p class="count">31天</p>
+                            <p class="txt">锁定期限</p>
+                        </div>
+                        <div class="detail-li">
+                            <p class="count">100元</p>
+                            <p class="txt">起投金额</p>
+                        </div>
+                    </div>
+                    <ul class="xxd-common-list">
+                        <li class="list-item">
+                            <span class="item-txt">起投金额</span>
+                            <span class="item-right-txt">100元</span>
+                        </li>
+                        <li class="list-item">
+                            <span class="item-txt">还款方式</span>
+                            <span class="item-right-txt">按月付息，到期通过债权转让退出</span>
+                        </li>
+                        <li class="list-item">
+                            <span class="item-txt">预计计息日</span>
+                            <span class="item-right-txt">满标日计息</span>
+                        </li>
+                        <li class="list-item">
+                            <span class="item-txt">资金用途</span>
+                            <span class="item-right-txt">日常生活消费</span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="">
+                <!--li子元素content默认显示，noLogin默认隐藏，如果未登录，li添加类名checkLogin，content隐藏，noLogin显示-->
+                <p class="title"><span class="bold-line"></span>借款详情</p>
+                <div class="noLogin">
+                    <div class="img_bg"></div>
+                    <p><a href="#">登录 </a> 后可查看</p>
+                </div>
+                <!--自然人信息-->
+                <div class="content">
+                    <p class="content-tit">借款人信息</p>
+                    <p class="list-item">
+                        <span class="item-txt">借款人主体：</span>
+                        <span class="item-value">自然人</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">发布者：</span>
+                        <span class="item-value">13***62</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">借款人姓名：</span>
+                        <span class="item-value">李**</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">身份证号码：</span>
+                        <span class="item-value">511121***********1</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">性别：</span>
+                        <span class="item-value">女</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">所在地：</span>
+                        <span class="item-value">江西省 南昌市</span>
+                    </p>
+                </div>
+
+                <!--法人信息-->
+                <div class="content">
+                    <p class="content-tit">借款人信息</p>
+                    <p class="list-item">
+                        <span class="item-txt">借款人主体：</span>
+                        <span class="item-value">法人</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">企业名称：</span>
+                        <span class="item-value">上海*******科科超市</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">注册资本：</span>
+                        <span class="item-value">600万元</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">注册地址：</span>
+                        <span class="item-value">**市**区**幢**室</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">成立时间：</span>
+                        <span class="item-value">2016-08-29</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">法定代表人：</span>
+                        <span class="item-value">张**</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">办公地点：</span>
+                        <span class="item-value">**市**区**幢**室</span>
+                    </p>
+                </div>
+
+
+                <!--自然人会有的列表-->
+                <div class="content">
+                    <p class="content-tit">借款相关</p>
+                    <p class="list-item">
+                        <span class="item-txt">信用等级：</span>
+                        <span class="item-value">AA</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">成功借款次数：</span>
+                        <span class="item-value">1次</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">逾期次数：</span>
+                        <span class="item-value">0次</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">逾期总金额：</span>
+                        <span class="item-value">0元</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">住房条件：</span>
+                        <span class="item-value">购房</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">是否购车：</span>
+                        <span class="item-value">是</span>
+                    </p>
+
+                </div>
+                <div class="content">
+                    <p class="content-tit">贷款记录</p>
+                    <p class="list-item">
+                        <span class="item-txt">待还金额：</span>
+                        <span class="item-value">37,440.23元</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">待还金额：</span>
+                        <span class="item-value">37,440.23元</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">累计借款：</span>
+                        <span class="item-value">37,440.23元</span>
+                    </p>
+                </div>
+                <div class="content">
+                    <p class="content-tit">借款描述</p>
+                    <p>本人陈庆生，男，南京人。现资金需短期周转，望批准。</p>
+                </div>
+                <!--自然人会有的列表-->
+
+                <div class="content">
+                    <p class="content-tit">在其他网络借贷平台借款情况</p>
+                    <p>
+                        该自然人在本平台借款余额未超过人民币20万元，在不同网络借贷信 息中介机构平台借款总余额未超过人民币100万元。
+                    </p>
+                </div>
+
+            </li>
+            <li>
+                <p class="title"><span class="bold-line"></span>资费说明</p>
+                <div class="content">
+                    <p class="list-item">
+                        <span class="item-txt">充值费：</span>
+                        <span class="item-value">0,00元</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">提现费：</span>
+                        <span class="item-value">0,00元</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">收益管理费：</span>
+                        <span class="item-value">应收利息的10%</span>
+                    </p>
+                    <p class="list-item">
+                        <span class="item-txt">债权转让手续费：</span>
+                        <span class="item-value">VIP用户转让手续费为本金的0.2%，非VIP用户为 0.5%，最低为人民币2元</span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="main-list xxd-common-list">
+            <li class="list-item">
+                <span class="item-txt">合同范本</span>
+                <span class="arrow-right-icon"></span>
+            </li>
+            <li class="list-item">
+                <span class="item-txt">还款记录</span>
+                <span class="arrow-right-icon"></span>
+            </li>
+            <li class="list-item">
+                <span class="item-txt">投标记录</span>
+                <span class="item-right-txt">12人</span>
+                <span class="arrow-right-icon"></span>
+            </li>
+            <li class="list-item">
+                <span class="item-txt">安全保障</span>
+                <span class="arrow-right-icon"></span>
+            </li>
+            <li class="list-item">
+                <span class="item-txt">项目风险提示</span>
+                <span class="arrow-right-icon"></span>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var canvas = document.getElementById('canvas'),  //获取canvas元素
+        context = canvas.getContext('2d'),  //获取画图环境，指明为2d
+        centerX = canvas.width / 2,   //Canvas中心点x轴坐标
+        centerY = canvas.height / 2,  //Canvas中心点y轴坐标
+        rad = Math.PI * 2 / 100; //将360度分成100份，那么每一份就是rad度
+    //绘制外圈
+    function purpleCircle(n) {
+        context.save();
+        context.lineCap = 'round';
+        var g = context.createLinearGradient(canvas.width / 2, canvas.height, 10, canvas.width / 2, 0, 10);   //创建渐变对象  渐变开始点和渐变结束点
+        g.addColorStop(0, '#923af5'); //添加颜色点
+        g.addColorStop(0.5, '#753bf1'); //添加颜色点
+        g.addColorStop(1, '#5b3dee'); //添加颜色点
+        context.strokeStyle = g; //设置描边样式
+        context.lineWidth = 6; //设置线宽
+        context.beginPath(); //路径开始
+        context.arc(centerX, centerY, 36, -Math.PI / 2, -Math.PI / 2 - n * rad, true);
+        context.stroke(); //绘制
+        context.closePath(); //路径结束
+        context.restore();
+    }
+
+    //绘制内圈
+    function whiteCircle() {
+        context.save();
+        context.strokeStyle = "#f5f5f5"; //设置描边样式
+        context.lineWidth = 6; //设置线宽
+        context.beginPath();
+        context.arc(centerX, centerY, 36, 0, Math.PI * 2, true);
+        context.stroke();
+        context.closePath();
+        context.restore();
+    }
+
+    function getCanvasPos(n) {//获取结束点canvas上的坐标
+        var hudu = Math.PI / 2 + n * rad;
+        console.log(centerX);
+        console.log(centerY);
+        return {
+            x: centerX + Math.cos(hudu)*36,
+            y: centerY - Math.sin(hudu)*36
+        };
+    }
+
+    function endCircle(n) {
+        var c = getCanvasPos(n);
+        console.log(c.x);
+        console.log(c.y);
+        // 同一个圆心，不同大小
+        context.save();
+        context.fillStyle = "#d6c4fd"; //设置描边样式
+        context.beginPath(); //路径开始
+        context.arc(c.x, c.y, 10, 0, Math.PI * 2, true);
+        context.fill(); //绘制
+        context.closePath(); //路径结束
+        context.restore();
+
+        context.save();
+        context.fillStyle = "#ad6bf8"; //设置描边样式
+        context.beginPath(); //路径开始
+        context.arc(c.x, c.y, 6, 0, Math.PI * 2, true);
+        context.fill(); //绘制
+        context.closePath(); //路径结束
+        context.restore();
+
+        context.save();
+        context.fillStyle = "#f2e7fe"; //设置描边样式
+        context.beginPath(); //路径开始
+        context.arc(c.x, c.y, 3, 0, Math.PI * 2, true);
+        context.fill(); //绘制
+        context.closePath(); //路径结束
+        context.restore();
+    }
+
+    whiteCircle();
+    /*传入百分比值*/
+    purpleCircle(75);
+
+    endCircle(75);
+
+
+</script>

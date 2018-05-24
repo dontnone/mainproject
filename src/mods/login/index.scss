@@ -1,0 +1,132 @@
+/**********************login page style start**************************/
+$uiWidth: 75px;
+
+@function pxToRem($px) {
+  @return $px / $uiWidth * 1rem;
+}
+
+.login-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  .register-container {
+    height: 100%;
+    margin-top: pxToRem(9px);
+    padding: pxToRem(80px) pxToRem(74px) pxToRem(48px) pxToRem(76px);
+    background: #ffffff;
+    font-weight: 200;
+    .div-logo {
+      width: pxToRem(135px);
+      height: pxToRem(135px);
+      line-height: pxToRem(135px);
+      text-align: center;
+      margin: pxToRem(6px) auto pxToRem(126px);
+      border: 3px solid #3682ed;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background: url("../login/imgs/logo@3x.png") no-repeat center;
+      background-size: pxToRem(63px) pxToRem(76px);
+    }
+    .div-input-border {
+      position: relative;
+      height: pxToRem(78px);
+      margin-bottom: pxToRem(45px);
+      border: 1px solid #e5e5e5;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      background: #ffffff;
+      .input-left-icon {
+        position: absolute;
+        width: pxToRem(108px);
+        height: 100%;
+      }
+      .phone-number-icon {
+        background: url("../login/imgs/user_icon@3x.png") no-repeat center;
+        background-size: pxToRem(32px) pxToRem(36px);
+      }
+      .code-icon {
+        background: url("../login/imgs/phone_icon@3x.png") no-repeat center;
+        background-size: pxToRem(26px) pxToRem(37px);
+      }
+      .psw-icon {
+        background: url("../login/imgs/lock_icon@3x.png") no-repeat center;
+        background-size: pxToRem(29px) pxToRem(37px);
+      }
+      input[type=number],input[type=text],input[type=password]{
+        position: absolute;
+        left: pxToRem(108px);
+        width: 70%;
+        height: 100%;
+        //padding:pxToRem(27px) pxToRem(40px) pxToRem(27px) 0;
+        font-size: pxToRem(24px);
+      }
+      .input-right-img {
+        position: absolute;
+        right: 0;
+        width: pxToRem(26px);
+        height: 100%;
+        vertical-align: middle;
+        padding:0 pxToRem(40px);
+      }
+      .cancel-img {
+        background: url("../login/imgs/clear_icon@3x.png") no-repeat center;
+        background-size: pxToRem(26px) pxToRem(26px);
+      }
+      button.send-code-btn {
+        position: absolute;
+        right: pxToRem(36px);
+        top: pxToRem(10px);
+        padding: pxToRem(10px) pxToRem(20px);
+        vertical-align: middle;
+        background: #ffffff;
+        border: 1px solid #3682ed;
+        font-size: pxToRem(20px);
+        color: #3682ed;
+      }
+      span.eye-img {
+        background: url("../login/imgs/eye_hide_icon@3x.png") no-repeat center;
+        background-size: pxToRem(26px) pxToRem(12px);
+      }
+      span.eye-open-img {
+        width: pxToRem(29px);
+        background: url("../register/imgs/eye_icon@3x.png") no-repeat center;
+        background-size: pxToRem(29px) pxToRem(24px);
+      }
+    }
+    .div-login-button {
+      margin: pxToRem(31px) 0 pxToRem(50px) 0;
+      button {
+        width: 100%;
+        height:pxToRem(78px);
+        font-size: pxToRem(30px);
+        font-weight: 200;
+        color: #ffffff;
+        background: #3682ed;
+        box-shadow: 0 1px 4px #3682ed;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+      }
+      button:disabled{
+        background: #95b9f1;
+      }
+    }
+    .div-link {
+      a.register-link {
+        float: left;
+        color: #3682ed;
+      }
+      a.forget-psw {
+        float: right;
+        color: #3682ed;
+      }
+    }
+
+  }
+}
+
+/**********************login page style end**************************/

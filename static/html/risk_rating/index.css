@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/*****************风险评测 style start****************/
+.risk-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1.2rem;
+  bottom: 0;
+  padding-bottom: 0.8rem;
+  overflow: auto;
+  background: #ffffff;
+}
+
+.risk-container .risk-tips {
+  padding: 0.25333rem 0.36rem;
+  background: #e7f0fe;
+  color: #4389f5;
+}
+
+.risk-container .rating-list-wrapper {
+  margin-top: 0.53333rem;
+}
+
+.risk-container .rating-list-wrapper .question-wrapper {
+  padding: 0.12rem 0.26667rem 0;
+}
+
+.risk-container .rating-list-wrapper .question-wrapper .question-txt {
+  color: #4389f5;
+  font-size: 0.34667rem;
+  font-weight: 600;
+}
+
+.risk-container .rating-list-wrapper .question-wrapper .answer-li {
+  margin: 0.53333rem 0;
+}
+
+.risk-container .rating-list-wrapper .question-wrapper .answer-li label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.30667rem;
+  height: 0.30667rem;
+  position: relative;
+}
+
+.risk-container .rating-list-wrapper .question-wrapper .answer-li label span, .risk-container .rating-list-wrapper .question-wrapper .answer-li label input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.30667rem;
+  height: 0.30667rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.risk-container .rating-list-wrapper .question-wrapper .answer-li label input[type=radio] {
+  opacity: 0;
+}
+
+.risk-container .rating-list-wrapper .question-wrapper .answer-li label span.radio {
+  border: 1px solid #cdcdcd;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.risk-container .rating-list-wrapper .question-wrapper .answer-li label span.radio.checked {
+  border: none;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAMAAAANmfvwAAAA51BMVEVDifX///9DifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifVDifUGbGQeAAAATHRSTlMAAAECBAkLDBEUGBweIyQlJiksLTIzNzhIT1VXWVtdY2ZoaW12eIKGmp+gp6yur7Kztre8vcPKz9Db3N7h4+Tl5+jq6/Hy8/j5+/z9SDZ/EgAAAURJREFUOMuFlGtbgkAQhc+KhmJampWS5iUiTM3UsjBNjK42///39AFw12Wh8+kM+z6zs+zOAIKMpt0fDRyrrvNvjHGf684p0s/E1GJIpu3RntyGhBgzimmYF5HqihRySxyp+KTUuhQhhSUlyM2HyJgSNQwQk1LUYAzILtIQV2P/JCEyGTBVL92frYmIaMKgb5XETeYivAsddRXw1ULrN/R1WApic84JsuDEiadDgSAHg8h+v4Tm7gCXnKABRpF9gPkZFIqemHOE/u4ZneLomT5a2CeoD3vn/RNox7pMkI0mD/wyAFxJxTdhCNFrGbiWz2cAcyH0rFuZmLPY1rK6DMh5aYSXYwA6aUibMQDaYzIxywRvt/iWRKyMqElq72rCr/JWqynzLCtiwxYV9YwL+22vdaSzL0zF8Ojx/7ydmlnFfEkcQX8XWvajJeEz6QAAAABJRU5ErkJggg==) no-repeat center;
+  background-size: cover;
+}
+
+.risk-container .rating-list-wrapper .question-wrapper .answer-li .answer-txt {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.13333rem;
+  font-size: 0.32rem;
+}
+
+.risk-container .default-tips {
+  padding: 0 0.26667rem;
+  color: #959595;
+}
+
+.risk-container .div-btn {
+  padding: 0 0.26667rem;
+  margin-top: 0.82667rem;
+}
+
+/*****************风险评测结果 style start****************/
+.riskresult-container {
+  margin-top: 0.06667rem;
+}
+
+.riskresult-container .result-score, .riskresult-container .result-type {
+  position: relative;
+  padding: 0.4rem 0.53333rem;
+  overflow: hidden;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.riskresult-container .result-score p, .riskresult-container .result-type p {
+  float: left;
+  width: 70%;
+  color: #2b2b2b;
+  font-size: 0.34667rem;
+  font-weight: 600;
+}
+
+.riskresult-container .result-score span, .riskresult-container .result-type span {
+  position: absolute;
+  right: 0.52rem;
+  color: #308bfe;
+}
+
+.riskresult-container .result-score span {
+  margin-top: 0.22667rem;
+}
+
+.riskresult-container .result-tips {
+  padding: 0.4rem 0.53333rem;
+  color: #747474;
+  line-height: 0.53333rem;
+}
+
+.riskresult-container .account-tips {
+  padding: 0 0.52rem;
+  color: #f31046;
+  display: none;
+}
+
+.riskresult-container .div-btn {
+  padding: 0 0.52rem;
+  margin-top: 1.68rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.riskresult-container .div-btn button {
+  float: left;
+  padding: 0.32rem 1.12rem;
+  line-height: 15px;
+  border: 1px solid #308bfe;
+  background: #ffffff;
+  font-size: 0.4rem;
+  font-weight: 200;
+  color: #308bfe;
+}
+
+.riskresult-container .div-btn button.investment, .riskresult-container .div-btn button.openaccount {
+  float: right;
+  background: #308bfe;
+  color: #ffffff;
+}
+
+.riskresult-container .div-btn button.openaccount {
+  display: none;
+}
+
+/*****************风险评测 style end****************/

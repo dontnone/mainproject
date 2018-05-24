@@ -1,0 +1,16 @@
+@import '../../node_modules/antd-mobile/lib/style/index.css';
+@import '../../node_modules/antd-mobile/lib/icon/style/index.css';
+@import '../../node_modules/antd-mobile/lib/toast/style/index.css';
+@import '../../node_modules/antd-mobile/lib/carousel/style/index.css';
+@import "../../static/html/css/base.css";
+@import "../../static/html/home/index.css";
+.my-carousel{
+    height: 3.73333rem!important;
+    background: #fff;
+}
+h1{
+    font-weight: normal;
+}
+.menu-item a{
+    display: block;
+}

@@ -1,0 +1,51 @@
+@import '../../../node_modules/antd-mobile/lib/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/icon/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/pull-to-refresh/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/list-view/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/button/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/toast/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/modal/style/index.css';
+
+@import "../../../static/html/css/base.css";
+@import '../../../static/html/news/index.css';
+
+$uiWidth: 75px;
+@function pxToRem($px) {
+  @return $px / $uiWidth * 1rem;
+}
+body, html{
+    overflow: auto;
+}
+h1{
+    font-weight: normal
+}
+.notice-info{
+    background: #fff;
+    margin-top: 5px;
+    padding: pxToRem(25px);
+    h2{
+        font-size: pxToRem(34px);
+        text-align: center;
+        padding: pxToRem(25px);
+    }
+    span{
+        font-size: pxToRem(25px)!important;
+    }
+    p{
+        line-height: pxToRem(30px);
+        padding: pxToRem(20px) 0;
+    }
+    table{
+        width: 100%;
+    }
+}
+.notice-author{
+    p{
+        background: #fff;
+        color: #4389f5;
+        span{
+            float: right;
+            color: #000;
+        }
+    }
+}

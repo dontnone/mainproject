@@ -1,0 +1,182 @@
+/*****************recharge page style start****************/
+$uiWidth: 75px;
+
+@function pxToRem($px) {
+  @return $px / $uiWidth * 1rem;
+}
+
+.xxb-box{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  .header-right-btn{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    top: 0;
+    padding: 0 pxToRem(20px);
+    line-height: pxToRem(88px);
+    color: #4389f5;
+  }
+  .xxb-container{
+    position: absolute;
+    top:pxToRem(90px);;
+    left: 0;
+    right: 0;
+    bottom:0;
+    overflow: auto;
+    font-weight: 200;
+    .xxb-detail{
+      padding-top:pxToRem(99px);
+      //background: #4389f5;
+      background: linear-gradient(left, #3fc2f3 20%, #826eff);
+      background: -webkit-linear-gradient(left, #3fc2f3 20%, #826eff);
+      background: -moz-linear-gradient(left, #3fc2f3 20%, #826eff);
+      background: -ms-linear-gradient(left, #3fc2f3 20%, #826eff);
+      background: -o-linear-gradient(left, #3fc2f3 20%, #826eff);
+      .xxb-count-wrapper{
+        text-align: center;
+        .xxb-count,.xxb-amount{
+          display: inline-block;
+          vertical-align: middle;
+          text-align: center;
+          color: #ffffff;
+          p.count{
+            font-size: pxToRem(48px);
+            font-weight: 600;
+          }
+          p.txt{
+            margin-top:pxToRem(20px);
+            font-size: pxToRem(20px);
+            font-weight: 200;
+          }
+        }
+        .xxb-amount{
+          margin-left:pxToRem(234px);
+        }
+      }
+      .exchange-tips{
+        margin-top:pxToRem(98px);
+        color: #fff;
+        text-align: center;
+        border-top: 1px solid rgba(250,250,250,.13);
+        line-height: pxToRem(60px);
+      }
+    }
+
+    .xxb-exchange{
+      .input-wrapper{
+        padding:0 pxToRem(18px);
+        margin-top: pxToRem(20px);
+        position: relative;
+        background: #ffffff;
+        .exchange-count{
+          line-height: pxToRem(50px);
+          font-size: pxToRem(24px);
+          color: #4389f5;
+          text-align: center;
+          border-top:1px solid #f9f9f9;
+          //padding-left:pxToRem(213px);
+        }
+        span.input-left{
+          display: inline-block;
+          vertical-align: middle;
+          font-size: pxToRem(24px);
+          color: #3a3a3a;
+        }
+        input{
+          position: relative;
+          left:pxToRem(100px);
+          vertical-align: middle;
+          width:pxToRem(340px);
+          padding:pxToRem(30px) 0;
+          text-align: center;
+          background: #ffffff;
+          color: #bcbcbc;
+          font-weight: 200;
+        }
+        button{
+          float: right;
+          margin-top:pxToRem(10px);
+          border:none;
+          font-size: pxToRem(24px);
+          color: #ffffff;
+          background: #4389f5;
+          padding:pxToRem(14px) pxToRem(13px);
+        }
+
+      }
+      //.authcode-input{
+      //  input{
+      //    position: relative;
+      //    left:pxToRem(45px);
+      //    vertical-align: middle;
+      //    width:pxToRem(340px);
+      //    padding:pxToRem(15px) 0;
+      //    text-align: center;
+      //    border:1px solid #bfbfbf;
+      //    background: #ffffff;
+      //    color: #bcbcbc;
+      //    font-weight: 200;
+      //  }
+      //  span.authcode-img{
+      //    border:1px solid #bfbfbf;
+      //    padding:0 pxToRem(32px);
+      //    line-height: pxToRem(58px);
+      //    border-radius: 0;
+      //  }
+      //}
+    }
+
+    .div-btn{
+      margin-top:pxToRem(40px);
+      padding:0 pxToRem(20px);
+    }
+  }
+}
+.record-container{
+  top:pxToRem(90px);;
+  background: #ffffff;
+  overflow: auto;
+  font-weight: 200;
+  .tab-wrapper{
+    border-top:1px solid #f9f9f9;
+    border-bottom:2px solid #f9f9f9 ;
+  }
+  .list-item {
+    position: relative;
+    padding:pxToRem(20px) pxToRem(36px);
+    border-bottom:1px solid #f9f9f9;
+    background: #ffffff;
+    font-weight: 200;
+    overflow: hidden;
+    align-items: center;
+    line-height: pxToRem(40px);
+    .item-left,.item-right{
+      -webkit-flex: 1;
+      -moz-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
+    .item-right{
+      text-align: right;
+    }
+    .amount{
+      color: #f60521;
+    }
+    .amount.subtract{
+      color: #8dedaf;
+      font-size: pxToRem(26px);
+    }
+    .xxb-source{
+      color: #000;
+      font-size: pxToRem(26px);
+      font-weight: 600;
+    }
+    .exchange-time,.activity-name{
+      color: #bcbcbc;
+    }
+  }
+}

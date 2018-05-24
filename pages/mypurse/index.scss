@@ -1,0 +1,24 @@
+@import '../../node_modules/antd-mobile/lib/style/index.css';
+@import '../../node_modules/antd-mobile/lib/modal/style/index.css';
+@import '../../node_modules/antd-mobile/lib/toast/style/index.css';
+@import '../../node_modules/antd-mobile/lib/icon/style/index.css';
+@import '../../node_modules/antd-mobile/lib/textarea-item/style/index.css';
+@import '../../node_modules/antd-mobile/lib/list/style/index.css';
+@import "../../static/html/css/base.css";
+@import '../../static/html/mypurse/index.css';
+
+h1{
+    font-weight: normal
+}
+.hide{
+    display: none;
+}
+.am-textarea-control textarea{
+    font-size: 13px;
+}
+.contact{
+    margin-top: 10px;
+}
+.feedback-box .am-list-item{
+    padding: 0 15px;
+}

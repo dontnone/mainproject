@@ -1,0 +1,90 @@
+// 银行字典表
+
+export default [{
+    bankCardCode: '0102',
+    bankCardName: '中国工商银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/gsyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/gsyh_bg@2x.png'
+}, {
+    bankCardCode: '0103',
+    bankCardName: '中国农业银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/nyyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/nyyh_bg@2x.png'
+}, {
+    bankCardCode: '0104',
+    bankCardName: '中国银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/zgyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/zgyh_bg@2x.png'
+}, {
+    bankCardCode: '0105',
+    bankCardName: '中国建设银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/jsyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/jsyh_bg@2x.png'
+}, {
+    bankCardCode: '0301',
+    bankCardName: '交通银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/jtyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/jtyh_bg@2x.png'
+}, {
+    bankCardCode: '0302',
+    bankCardName: '中信银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/zxyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/zxyh_bg@2x.png'
+}, {
+    bankCardCode: '0303',
+    bankCardName: '中国光大银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/gdyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/gdyh_bg@2x.png'
+}, {
+    bankCardCode: '0304',
+    bankCardName: '华夏银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/hxyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/hxyh_bg@2x.png'
+}, {
+    bankCardCode: '0305',
+    bankCardName: '中国民生银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/msyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/msyh_bg@2x.png'
+}, {
+    bankCardCode: '0306',
+    bankCardName: '广东发展银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/gfyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/gfyh_bg@2x.png'
+}, {
+    bankCardCode: '0307',
+    bankCardName: '平安银行股份有限公司',
+    bankCardImg: '/static/html/openaccount/yhimgs/payh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/payh_bg@2x.png'
+
+}, {
+    bankCardCode: '0308',
+    bankCardName: '招商银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/zsyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/zsyh_bg@2x.png'
+
+}, {
+    bankCardCode: '0309',
+    bankCardName: '兴业银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/xyyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/xyyh_bg@2x.png'
+}, {
+    bankCardCode: '0310',
+    bankCardName: '上海浦东发展银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/pfyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/pfyh_bg@2x.png'
+}, {
+    bankCardCode: '0319',
+    bankCardName: '徽商银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/hsyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/hsyh_bg@2x.png'
+}, {
+    bankCardCode: '0314',
+    bankCardName: '其他农村商业银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/yzyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/yzyh_bg@2x.png'
+}, {
+    bankCardCode: '0315',
+    bankCardName: '恒丰银行',
+    bankCardImg: '/static/html/openaccount/yhimgs/hfyh@2x.png',
+    bankCardImgBg: '/static/html/openaccount/yhimgs/hfyh_bg@2x.png'
+}]

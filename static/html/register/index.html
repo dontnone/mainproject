@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport"/>
+    <title>新新贷-注册</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="../base.js"></script>
+</head>
+<body>
+<div class="register-box">
+    <div class="register-header common-header">
+        <a href="#" class="arrow-left-icon header-left-arrow"></a>
+        <div class="common-header-tit">注册新账户</div>
+    </div>
+    <div class="register-container">
+        <div class="input-wrapper">
+            <div class="div-input-border">
+                <span class="input-left-icon phone-number-icon"></span>
+                <input type="number" class="phone-number-input" placeholder="请输入您的手机号">
+                <span class="input-right-img cancel-img"></span>
+            </div>
+            <div class="div-input-border mb-0">
+                <span class="input-left-icon code-icon"></span>
+                <input type="text" placeholder="请输入手机验证码">
+                <div class="code-btn">
+                    <button class="send-code-btn">发送验证码</button>
+                </div>
+            </div>
+            <div class="div-link"><a href="#">语音验证码</a></div>
+            <div class="div-input-border">
+                <span class="input-left-icon psw-icon"></span>
+                <input type="password" placeholder="设置登录密码（6-16位字母+数字)">
+                <span class="input-right-img eye-img eye-open-img"></span>
+                <!--eye-open-img 为显示密码状态-->
+            </div>
+            <div class="div-checkbox">
+                <label for="">
+                    <span class="checkbox checked"></span>
+                    <input type="checkbox" checked>
+                </label>
+                <div class="agreement">
+                    我已阅读并同意<a href="#">《新新贷注册使用协议》、</a><a href="#">《资金出借风险提示函》</a>
+                </div>
+            </div>
+            <div class="div-button">
+                <button>注册</button>
+            </div>
+            <div class="div-login">
+                已是新新贷会员，<a href="#">马上登录</a>
+            </div>
+        </div>
+        <div class="tips">
+            <div class="img-block"></div>
+            <p>新新贷已接入上海华瑞银行存管</p>
+        </div>
+        <!--验证码弹窗-->
+        <div class="authcode-alert-wrapper">
+            <div class="authcode-alert-box">
+                <p class="authcode-alert-tit">输入验证码</p>
+                <div class="authcode-input-box">
+                    <div class="authcode-input">
+                        <input type="text">
+                        <span class="authcode-img"></span>
+                    </div>
+                    <p class="authcode-error-tips">验证码错误，请重新输入</p>
+                </div>
+
+                <div class="authcode-alert-btn">
+                    <button class="cancel-btn">取消</button>
+                    <button class="ok-btn">确认</button>
+                </div>
+            </div>
+        </div>
+        <!--验证码弹窗-->
+    </div>
+</div>
+</body>
+</html>

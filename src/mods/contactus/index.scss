@@ -1,0 +1,81 @@
+/*****************contactus page style start****************/
+$uiWidth: 75px;
+
+@function pxToRem($px) {
+  @return $px / $uiWidth * 1rem;
+}
+
+.contactus-box{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  .contactus-container{
+    position: absolute;
+    top:pxToRem(90px);;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    margin-top: pxToRem(9px);
+    //padding-top:pxToRem(64px);
+    .logo-wrapper{
+      height:pxToRem(112px);
+      padding:pxToRem(64px) pxToRem(54px) 0;
+      background: #ffffff url("../contactus/imgs/logo_name2.png") no-repeat left pxToRem(44px) top pxToRem(64px);
+      background-size: pxToRem(319px) pxToRem(112px);
+    }
+    .contact-list{
+      padding:pxToRem(75px) pxToRem(35px) 0;
+      background: #ffffff;
+      font-weight: 200;
+      .contact-list-item{
+        padding:pxToRem(30px) 0;
+        border-bottom: 1px solid #f5f5f5;
+        .item-left{
+          padding-left:pxToRem(55px);
+          color: #3483ec;
+          font-size: pxToRem(24px);
+        }
+        .wx-icon{
+          background: url("../contactus/imgs/wx_icon@3x.png") no-repeat pxToRem(10px) center;
+          background-size: pxToRem(30px) pxToRem(26px);
+        }
+        .wb-icon{
+          background: url("../contactus/imgs/wb_icon@3x.png") no-repeat pxToRem(10px) center;
+          background-size: pxToRem(30px) pxToRem(26px);
+        }
+        .telephone-icon{
+          background: url("../contactus/imgs/phone_icon@3x.png") no-repeat pxToRem(10px) center;
+          background-size: pxToRem(30px) pxToRem(26px);
+        }
+        .qq-icon{
+           background: url("../contactus/imgs/qq@3x.png") no-repeat pxToRem(10px) center;
+           background-size: pxToRem(30px) pxToRem(30px);
+         }
+        .qq-group-icon{
+          background: url("../contactus/imgs/qq_group_icon@3x.png") no-repeat pxToRem(10px) center;
+          background-size: pxToRem(30px) pxToRem(26px);
+        }
+        .email-icon{
+          background: url("../contactus/imgs/email_icon@3x.png") no-repeat pxToRem(10px) center;
+          background-size: pxToRem(30px) pxToRem(26px);
+        }
+
+        .item-value{
+          position: absolute;
+          left:pxToRem(290px);
+          color: #7e7e7e;
+          white-space: nowrap;
+          word-wrap: break-word;
+        }
+      }
+    }
+    .ad-wrapper{
+      height:pxToRem(200px);
+      margin-top:pxToRem(23px);
+      background: url("../contactus/imgs/contactus_ad2.png") no-repeat center;
+      background-size: 100% pxToRem(200px);
+    }
+  }
+}

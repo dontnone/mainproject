@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/**************************重置密码 start*********************/
+.reset-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /**************************重置密码 start*********************/
+}
+
+.reset-box .reset-container {
+  height: 100%;
+  margin-top: 0.12rem;
+  background: #ffffff;
+  padding: 0.65333rem 0.46667rem;
+  font-weight: 200;
+  /*重新密码提交*/
+  /*忘记密码*/
+}
+
+.reset-box .reset-container .div-input-border {
+  position: relative;
+  border: 1px solid #f1f1f1;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 0.53333rem;
+  padding: 0.36rem 0.16rem 0.36rem 0.54667rem;
+}
+
+.reset-box .reset-container .div-input-border input {
+  width: 100%;
+  font-weight: 200;
+}
+
+.reset-box .reset-container .div-input-border .input-right-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.2rem 0.16rem;
+}
+
+.reset-box .reset-container .div-input-border .input-right-btn button {
+  padding: 0.16rem 0.14667rem;
+  background: #4389f5;
+  color: #ffffff;
+  font-weight: 200;
+}
+
+.reset-box .reset-container .div-input-border .input-right-btn button:disabled {
+  background: #95b9f1;
+}
+
+.reset-box .reset-container .div-input-border.mb-0 {
+  margin-bottom: 0;
+}
+
+.reset-box .reset-container .div-link {
+  padding: 0.26667rem 0;
+  text-align: right;
+  margin-bottom: 1.2rem;
+}
+
+.reset-box .reset-container .div-link span.tips {
+  float: left;
+}
+
+.reset-box .reset-container .div-link a {
+  margin-right: 0.12rem;
+  color: #4389f5;
+}
+
+.reset-box .reset-container .div-btn button {
+  width: 100%;
+  padding: 0.34667rem 0;
+  background: #4389f5;
+  color: #ffffff;
+  font-size: 0.4rem;
+  font-weight: 200;
+}
+
+.reset-box .reset-container .div-btn button:disabled {
+  background: #95b9f1;
+}
+
+.reset-box .reset-container .mt-45 {
+  margin-top: 1.2rem;
+}
+
+.reset-box .reset-container .div-input-wrapper .input-tit {
+  padding: 0.26667rem 0.33333rem;
+  font-size: 0.34667rem;
+  color: #000000;
+}
+
+.reset-box .reset-container .div-phone-number {
+  margin-bottom: 0.68rem;
+  text-align: center;
+  font-size: 0.34667rem;
+}
+
+.reset-box .reset-container .div-phone-number .phone-num {
+  padding: 0.25333rem 0;
+  color: #4389f5;
+}
+
+.reset-box .change-container .div-input-wrapper .input-tit {
+  padding: 0.26667rem 0.33333rem 0;
+}
+
+.reset-box .change-container .div-input-wrapper .div-input-border {
+  position: relative;
+  border: none;
+  border-bottom: 1px solid #f1f1f1;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  margin-bottom: 0.53333rem;
+  padding: 0.36rem 0.16rem 0.26667rem 0.33333rem;
+}
+
+.reset-box .change-container .forget-psw {
+  padding: 0.25333rem 0.26667rem;
+  text-align: right;
+  color: #4389f5;
+}

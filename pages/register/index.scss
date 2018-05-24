@@ -1,0 +1,37 @@
+@import '../../node_modules/antd-mobile/lib/style/index.css';
+@import '../../node_modules/antd-mobile/lib/toast/style/index.css';
+@import '../../node_modules/antd-mobile/lib/modal/style/index.css';
+@import '../../node_modules/antd-mobile/lib/button/style/index.css';
+@import '../../node_modules/antd-mobile/lib/icon/style/index.css';
+@import "../../static/html/css/base.css";
+@import '../../static/html/register/index.css';
+
+$uiWidth: 75px;
+
+@function pxToRem($px) {
+  @return $px / $uiWidth * 1rem;
+}
+
+h1{
+    font-weight: normal
+}
+.hide{
+    display: none;
+}
+.gray{
+    color: #ccc!important;
+}
+.phoneCode{
+    input{
+        border: 1px solid #f1f1f1;
+        padding: 0.25rem;
+        width: 60%;
+        float: left;
+        box-sizing: border-box;
+    }
+    img{
+        width: 40%;
+        height: 0.99rem;
+        float: right;
+    }
+}

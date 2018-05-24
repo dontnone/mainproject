@@ -1,0 +1,511 @@
+@charset "UTF-8";
+/******************reset start******************/
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 禁止缩放表单 */
+input[type="submit"], input[type="reset"], input[type="button"], input {
+  resize: none;
+  border: none;
+}
+
+/* 取消链接高亮  */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  -webkit-tap-highlight-color: transparent;
+  font-size: 12px;
+}
+
+/* 设置HTML5元素为块 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+  display: block;
+  -ms-interpolation-mode: bicubic;
+  /*为了照顾ie图片缩放失真*/
+}
+
+/* 初始化 */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+}
+
+em, i {
+  font-style: normal;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+strong {
+  font-weight: normal;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #969696;
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-family: 'Microsoft YaHei',sans-serif;
+}
+
+img {
+  border: none;
+}
+
+input {
+  font-family: 'Microsoft YaHei',sans-serif;
+}
+
+/*单行溢出*/
+.one-txt-cut {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/*多行溢出 手机端使用*/
+.txt-cut {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+/* 移动端点击a链接出现蓝色背景问题解决 */
+a:link, a:active, a:visited, a:hover {
+  background: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/******************reset end******************/
+/**********************index page style start********************/
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Lantinghei SC','Microsoft YaHei','宋体', Tahoma, Arial, sans-serif;
+  overflow: hidden;
+}
+
+#index-box {
+  width: 100%;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+#index-box .header {
+  width: 100%;
+  height: 1.30667rem;
+  position: relative;
+  background-color: #ffffff;
+}
+
+#index-box .header .logo-wrapper {
+  position: absolute;
+  left: 0.4rem;
+  top: 0.32rem;
+}
+
+#index-box .header .logo-wrapper div {
+  float: left;
+}
+
+#index-box .header .logo-wrapper .logo {
+  margin-right: 0.22667rem;
+}
+
+#index-box .header .logo-wrapper .logo img {
+  width: 0.82667rem;
+  height: 0.82667rem;
+}
+
+#index-box .header .logo-wrapper .header-tit .app-name {
+  font-size: 12px;
+  color: #373737;
+}
+
+#index-box .header .logo-wrapper .header-tit .app-slogan {
+  font-size: 10px;
+  color: #b8b8b8;
+}
+
+#index-box .header .header-right {
+  position: absolute;
+  top: 0;
+  right: 0.53333rem;
+  height: 100%;
+  line-height: 1.30667rem;
+}
+
+#index-box .header .header-right .open-app-btn {
+  width: 1.6rem;
+  height: 0.77333rem;
+  font-size: 12px;
+  background-color: #4389f5;
+  color: #fff;
+}
+
+#index-box .container {
+  position: absolute;
+  top: 1.30667rem;
+  bottom: 1.30667rem;
+  right: 0;
+  left: 0;
+  overflow: auto;
+}
+
+#index-box .container .banner-wrapper {
+  width: 100%;
+  height: 3.73333rem;
+  margin-bottom: 0.13333rem;
+  background-color: #cccccc;
+}
+
+#index-box .container .banner-wrapper img {
+  width: 100%;
+  height: 3.73333rem;
+}
+
+#index-box .container .menu-wrapper {
+  height: 2.4rem;
+  background-color: #ffffff;
+}
+
+#index-box .container .menu-wrapper ul.menu {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+}
+
+#index-box .container .menu-wrapper ul.menu li.menu-item {
+  flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  text-align: center;
+}
+
+#index-box .container .menu-wrapper ul.menu li.menu-item .menu-icon {
+  display: block;
+  width: 1.06667rem;
+  height: 1.06667rem;
+  margin: 0.4rem auto 0.22667rem;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+#index-box .container .menu-wrapper ul.menu li.menu-item .menu-icon img {
+  display: inline-block;
+  width: 1.06667rem;
+  height: 1.06667rem;
+}
+
+#index-box .container .menu-wrapper ul.menu li.menu-item .association-icon {
+  background: #fedbcf url("imgs/association_members@3x.png") no-repeat center;
+  background-size: 0.66667rem 0.50667rem;
+}
+
+#index-box .container .menu-wrapper ul.menu li.menu-item .sasac-icon {
+  background: #d4d5fa url("imgs/sasac_icon@3x.png") no-repeat center;
+  background-size: 0.52rem 0.50667rem;
+}
+
+#index-box .container .menu-wrapper ul.menu li.menu-item .depository-icon {
+  background: #f8e7c5 url("imgs/depository_icon@3x.png") no-repeat center;
+  background-size: 0.42667rem 0.50667rem;
+}
+
+#index-box .container .menu-wrapper ul.menu li.menu-item .risk-management-icon {
+  background: #c5e9fe url("imgs/risk_management_icon@3x.png") no-repeat center;
+  background-size: 0.45333rem 0.50667rem;
+}
+
+#index-box .container .menu-wrapper ul.menu li.menu-item .menu-txt {
+  font-size: 12px;
+  color: #2b2b2b;
+  font-family: Lantinghei SC,sans-serif;
+}
+
+#index-box .container .main .product-ad {
+  width: 100%;
+  height: 1.17333rem;
+  margin: 0.05333rem 0;
+  background: #ffffff url("imgs/ad_red_packet.png") no-repeat center;
+  background-size: 8.88rem 0.85333rem;
+}
+
+#index-box .container .main .product-wrapper {
+  min-height: 6.66667rem;
+  padding-bottom: 0.4rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+#index-box .container .main .product-wrapper .product-tit {
+  text-align: center;
+  height: 0.86667rem;
+  line-height: 0.86667rem;
+}
+
+#index-box .container .main .product-wrapper .product-tit span.circle {
+  display: inline-block;
+  width: 0.16rem;
+  height: 0.16rem;
+  background-color: #5395ef;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+#index-box .container .main .product-wrapper .product-tit span.tit-txt {
+  margin: 0 0.13333rem;
+  font-size: 13px;
+}
+
+#index-box .container .main .product-wrapper .product-detail {
+  width: 9.2rem;
+  margin: 0 auto;
+  padding-top: 0.53333rem;
+  border: 1px solid #e8e8e8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#index-box .container .main .product-wrapper .product-detail .product-name {
+  font-size: 14px;
+  color: #000000;
+}
+
+#index-box .container .main .product-wrapper .product-detail .product-earnings {
+  margin: 0.42667rem auto 0.37333rem;
+}
+
+#index-box .container .main .product-wrapper .product-detail .product-earnings .earnings-apy {
+  color: #f23c3c;
+}
+
+#index-box .container .main .product-wrapper .product-detail .product-earnings .earnings-apy .percentM {
+  font-size: 30px;
+}
+
+#index-box .container .main .product-wrapper .product-detail .product-earnings .earnings-apy .percentS {
+  font-size: 20px;
+}
+
+#index-box .container .main .product-wrapper .product-detail .product-earnings p {
+  margin-top: 0.37333rem;
+  font-size: 12px;
+  color: #bababa;
+}
+
+#index-box .container .main .product-wrapper .product-detail .product-require span {
+  display: inline-block;
+  min-width: 1.33333rem;
+  height: 0.4rem;
+  margin-right: 0.26667rem;
+  padding: 0.06667rem;
+  line-height: 0.4rem;
+  border: 1px solid #f23c3c;
+  color: #f23c3c;
+  font-size: 10px;
+}
+
+#index-box .container .main .product-wrapper .product-detail .product-require span:last-child {
+  margin-right: 0;
+}
+
+#index-box .container .main .product-wrapper .product-detail .purchase-btn {
+  width: 4.53333rem;
+  height: 0.90667rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.54667rem;
+  font-size: 13px;
+  background-color: #3d7cf1;
+  color: #ffffff;
+}
+
+#index-box .container .main .xxd-ad-wrapper {
+  height: 2.68rem;
+  margin-top: 0.33333rem;
+  padding-left: 0.66667rem;
+  background: url("imgs/ad_bg.png") no-repeat 1px center;
+  background-size: cover;
+}
+
+#index-box .container .main .xxd-ad-wrapper .ad-tit {
+  padding-top: 0.37333rem;
+  color: #3384ec;
+  font-size: 20px;
+}
+
+#index-box .container .main .xxd-ad-wrapper .ad-tit .big {
+  font-size: 30px;
+}
+
+#index-box .container .main .xxd-ad-wrapper .ad-words {
+  line-height: 0.53333rem;
+  font-size: 10px;
+  color: #3e3e3e;
+}
+
+#index-box .container .main .xxd-ad-wrapper .find-more-btn {
+  width: 1.89333rem;
+  height: 0.53333rem;
+  background: #3d7cf1 url("imgs/next_icon.png") no-repeat 1.62667rem center;
+  background-size: 0.21333rem 0.21333rem;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+
+#index-box .container .main .main-bottom {
+  height: 2.21333rem;
+  margin: 0.13333rem auto;
+  text-align: center;
+  background-color: #ffffff;
+  font-size: 9px;
+  color: #393939;
+}
+
+#index-box .container .main .main-bottom .bottom-link {
+  padding-top: 0.42667rem;
+}
+
+#index-box .container .main .main-bottom .bottom-link a {
+  padding: 0 0.16rem;
+  border-left: 1px solid #9d9d9d;
+  font-size: 9px;
+  color: #387fee;
+}
+
+#index-box .container .main .main-bottom .bottom-link a:first-child {
+  border-left: none;
+}
+
+#index-box .container .main .main-bottom p.company-name {
+  margin-top: 0.26667rem;
+  margin-bottom: 0.13333rem;
+}
+
+#index-box .container .main .main-bottom p.company-tips {
+  margin-bottom: 0.26667rem;
+}
+
+#index-box .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1.30667rem;
+  background-color: #ffffff;
+}
+
+#index-box .footer .footer-tab {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+}
+
+#index-box .footer .footer-tab .tab-link {
+  flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  font-size: 12px;
+}
+
+#index-box .footer .footer-tab .tab-link .tab-link-icon {
+  display: block;
+  width: 0.53333rem;
+  height: 0.53333rem;
+  margin: 0 auto 0.16rem;
+}
+
+#index-box .footer .footer-tab .tab-link .tab-home {
+  background: url("imgs/home_icon@3x.png") no-repeat;
+  background-size: 0.53333rem 0.53333rem;
+}
+
+#index-box .footer .footer-tab .tab-link .tab-financial {
+  background: url("imgs/financial_icon@3x.png") no-repeat;
+  background-size: 0.53333rem 0.53333rem;
+}
+
+#index-box .footer .footer-tab .tab-link .tab-my-xxd {
+  background: url("imgs/my_xxd_icon@3x.png") no-repeat;
+  background-size: 0.53333rem 0.53333rem;
+}
+
+#index-box .footer .footer-tab .tab-link-act {
+  color: #387fee;
+}
+
+#index-box .footer .footer-tab .tab-link-act .tab-home {
+  background: url("imgs/home_icon_act@3x.png") no-repeat;
+  background-size: 0.53333rem 0.53333rem;
+}
+
+#index-box .footer .footer-tab .tab-link-act .tab-financial {
+  background: url("imgs/financial_icon_act@3x.png") no-repeat;
+  background-size: 0.53333rem 0.53333rem;
+}
+
+#index-box .footer .footer-tab .tab-link-act .tab-my-xxd {
+  background: url("imgs/my_xxd_icon_act@3x.png") no-repeat;
+  background-size: 0.53333rem 0.53333rem;
+}
+
+/*******************index page style end******************/

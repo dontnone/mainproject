@@ -1,0 +1,173 @@
+/*****************recharge page style start****************/
+.xxb-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.xxb-box .header-right-btn {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0;
+  padding: 0 0.26667rem;
+  line-height: 1.17333rem;
+  color: #4389f5;
+}
+
+.xxb-box .xxb-container {
+  position: absolute;
+  top: 1.2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  font-weight: 200;
+}
+
+.xxb-box .xxb-container .xxb-detail {
+  padding-top: 1.32rem;
+  background: linear-gradient(left, #3fc2f3 20%, #826eff);
+  background: -webkit-linear-gradient(left, #3fc2f3 20%, #826eff);
+  background: -moz-linear-gradient(left, #3fc2f3 20%, #826eff);
+  background: -ms-linear-gradient(left, #3fc2f3 20%, #826eff);
+  background: -o-linear-gradient(left, #3fc2f3 20%, #826eff);
+}
+
+.xxb-box .xxb-container .xxb-detail .xxb-count-wrapper {
+  text-align: center;
+}
+
+.xxb-box .xxb-container .xxb-detail .xxb-count-wrapper .xxb-count, .xxb-box .xxb-container .xxb-detail .xxb-count-wrapper .xxb-amount {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  color: #ffffff;
+}
+
+.xxb-box .xxb-container .xxb-detail .xxb-count-wrapper .xxb-count p.count, .xxb-box .xxb-container .xxb-detail .xxb-count-wrapper .xxb-amount p.count {
+  font-size: 0.64rem;
+  font-weight: 600;
+}
+
+.xxb-box .xxb-container .xxb-detail .xxb-count-wrapper .xxb-count p.txt, .xxb-box .xxb-container .xxb-detail .xxb-count-wrapper .xxb-amount p.txt {
+  margin-top: 0.26667rem;
+  font-size: 0.26667rem;
+  font-weight: 200;
+}
+
+.xxb-box .xxb-container .xxb-detail .xxb-count-wrapper .xxb-amount {
+  margin-left: 3.12rem;
+}
+
+.xxb-box .xxb-container .xxb-detail .exchange-tips {
+  margin-top: 1.30667rem;
+  color: #fff;
+  text-align: center;
+  border-top: 1px solid rgba(250, 250, 250, 0.13);
+  line-height: 0.8rem;
+}
+
+.xxb-box .xxb-container .xxb-exchange .input-wrapper {
+  padding: 0 0.24rem;
+  margin-top: 0.26667rem;
+  position: relative;
+  background: #ffffff;
+}
+
+.xxb-box .xxb-container .xxb-exchange .input-wrapper .exchange-count {
+  line-height: 0.66667rem;
+  font-size: 0.32rem;
+  color: #4389f5;
+  text-align: center;
+  border-top: 1px solid #f9f9f9;
+}
+
+.xxb-box .xxb-container .xxb-exchange .input-wrapper span.input-left {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.32rem;
+  color: #3a3a3a;
+}
+
+.xxb-box .xxb-container .xxb-exchange .input-wrapper input {
+  position: relative;
+  left: 1.33333rem;
+  vertical-align: middle;
+  width: 4.53333rem;
+  padding: 0.4rem 0;
+  text-align: center;
+  background: #ffffff;
+  color: #bcbcbc;
+  font-weight: 200;
+}
+
+.xxb-box .xxb-container .xxb-exchange .input-wrapper button {
+  float: right;
+  margin-top: 0.13333rem;
+  border: none;
+  font-size: 0.32rem;
+  color: #ffffff;
+  background: #4389f5;
+  padding: 0.18667rem 0.17333rem;
+}
+
+.xxb-box .xxb-container .div-btn {
+  margin-top: 0.53333rem;
+  padding: 0 0.26667rem;
+}
+
+.record-container {
+  top: 1.2rem;
+  background: #ffffff;
+  overflow: auto;
+  font-weight: 200;
+}
+
+.record-container .tab-wrapper {
+  border-top: 1px solid #f9f9f9;
+  border-bottom: 2px solid #f9f9f9;
+}
+
+.record-container .list-item {
+  position: relative;
+  padding: 0.26667rem 0.48rem;
+  border-bottom: 1px solid #f9f9f9;
+  background: #ffffff;
+  font-weight: 200;
+  overflow: hidden;
+  align-items: center;
+  line-height: 0.53333rem;
+}
+
+.record-container .list-item .item-left, .record-container .list-item .item-right {
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.record-container .list-item .item-right {
+  text-align: right;
+}
+
+.record-container .list-item .amount {
+  color: #f60521;
+}
+
+.record-container .list-item .amount.subtract {
+  color: #8dedaf;
+  font-size: 0.34667rem;
+}
+
+.record-container .list-item .xxb-source {
+  color: #000;
+  font-size: 0.34667rem;
+  font-weight: 600;
+}
+
+.record-container .list-item .exchange-time, .record-container .list-item .activity-name {
+  color: #bcbcbc;
+}

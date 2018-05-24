@@ -1,0 +1,84 @@
+/*****************个人中心 style start****************/
+$uiWidth: 75px;
+
+@function pxToRem($px) {
+  @return $px / $uiWidth * 1rem;
+}
+
+.personal-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: pxToRem(88px);
+  bottom: 0;
+  overflow: auto;
+  background: #ffffff;
+  margin-top: pxToRem(5px);
+  padding-bottom: pxToRem(88px);
+  .main-list {
+    .list-item {
+      position: relative;
+      //margin-bottom: 1px;
+      border-bottom: 1px solid #f2f2f2;
+      padding: pxToRem(28px) pxToRem(30px) pxToRem(28px) pxToRem(32px);
+      font-weight: 200;
+      background: #ffffff;
+    }
+    .item-icon {
+      padding: pxToRem(15px);
+    }
+    .bank-icon {
+      background: url("../personal/imgs/bank_icon@3x.png") no-repeat center;
+      background-size: pxToRem(24px) pxToRem(25px);
+    }
+    .graph-icon {
+      padding: pxToRem(15px);
+      background: url("../personal/imgs/graph_icon@3x.png") no-repeat center;
+      background-size: pxToRem(24px) pxToRem(24px);
+    }
+    .key-icon {
+      padding: pxToRem(15px);
+      background: url("../personal/imgs/key_icon@3x.png") no-repeat center;
+      background-size: pxToRem(24px) pxToRem(24px);
+    }
+    .group-icon {
+      padding: pxToRem(15px);
+      background: url("../personal/imgs/group_icon@3x.png") no-repeat center;
+      background-size: pxToRem(30px) pxToRem(24px);
+    }
+    .item-txt {
+      margin-left: pxToRem(19px);
+      font-size: pxToRem(24px);
+      color: #3a3a3a;
+    }
+    .item-right-txt {
+      position: absolute;
+      right: pxToRem(50px);
+      top: pxToRem(30px);
+      color: #3a3a3a;
+    }
+    .arrow-right-icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      padding: 0 pxToRem(30px);
+      background: url("../mypurse/imgs/arrow_right_icon.png") no-repeat center;
+      background-size: pxToRem(15px) pxToRem(27px);
+    }
+  }
+  .div-btn {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    button {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+    }
+  }
+}
+
+/*****************个人中心 style end****************/
+
+

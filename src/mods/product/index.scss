@@ -1,0 +1,923 @@
+/**************************理财产品列表 start**********************/
+$uiWidth: 75px;
+
+@function pxToRem($px) {
+  @return $px / $uiWidth * 1rem;
+}
+
+.top {
+  width:100%;
+  height:pxToRem(160px);
+  //padding: pxToRem(40px) 0 pxToRem(40px) pxToRem(39px);
+  //background: #ffffff url("../product/imgs/register_ad_bg.png") no-repeat center;
+  //background-size: 100%;
+  //font-size: pxToRem(38px);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  //.notice-txt {
+  //  margin-bottom: pxToRem(16px);
+  //  font-size: pxToRem(40px);
+  //  line-height: 20px;
+  //  font-weight: 600;
+  //  .red-color {
+  //    color: #f2403f;
+  //  }
+  //}
+  //.tips-txt {
+  //  color: #b2b2b2;
+  //  font-size: pxToRem(24px);
+  //  font-weight: 200;
+  //  line-height: pxToRem(24px);
+  //}
+  img{
+    display: block;
+    width:100%;
+    height:100%;
+  }
+}
+
+.product-container {
+  //margin-top: pxToRem(160px);
+  font-weight: 200;
+  padding-bottom: pxToRem(128px);
+  overflow: auto;
+  .product-tit {
+    padding: pxToRem(19px) pxToRem(19px) pxToRem(10px);
+    font-size: pxToRem(24px);
+    color: #b2b2b2;
+  }
+  .product-list {
+    li {
+      padding: pxToRem(19px);
+      margin-top: pxToRem(10px);
+      background: #ffffff;
+      position: relative;
+      .product-name {
+        margin-bottom: pxToRem(38px);
+        color: #3a3a3a;
+        font-weight: 600;
+        font-size: pxToRem(30px);
+        .product-require {
+          display: inline-block;
+          -webkit-transform: translateY(-10%);
+          -moz-transform: translateY(-10%);
+          -ms-transform: translateY(-10%);
+          -o-transform: translateY(-10%);
+          transform: translateY(-10%);
+          height:pxToRem(28px);
+          line-height: pxToRem(28px);
+          margin-left: pxToRem(19px);
+          padding: 0 pxToRem(8px);
+          border: 1px solid rgba(67,137,245,.3);
+          color: #4389f5;
+          font-size: pxToRem(18px);
+          font-weight: 200;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          border-radius: 2px;;
+        }
+        .app-vip {
+          display: inline-block;
+          vertical-align: middle;
+          height:pxToRem(28px);
+          line-height: pxToRem(28px);
+          margin-left: pxToRem(19px);
+          padding: 0 pxToRem(8px);
+          border: 1px solid rgba(242,64,63,.3);
+          color: #f2403f;
+          font-weight: 200;
+          font-size: pxToRem(18px);
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          border-radius: 2px;
+        }
+      }
+      .product-detail {
+        align-items: flex-end;
+        -webkit-align-items: flex-end;
+        .detail-li {
+          -webkit-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          text-align: center;
+          p.count {
+            font-size: pxToRem(32px);
+            color: #3a3a3a;
+            font-weight: 400;
+          }
+          p.txt {
+            //margin-top: pxToRem(10px);
+            font-size: pxToRem(22px);
+            color: #7e7e7e;
+          }
+          button {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: pxToRem(10px) pxToRem(20px);
+            color: #3f9bff;
+            font-size: pxToRem(28px);
+            line-height: pxToRem(28px);
+            font-weight: 200;
+            border: 1px solid #3f9bff;
+            -webkit-border-radius: pxToRem(24px);
+            -moz-border-radius: pxToRem(24px);
+            border-radius: pxToRem(24px);
+            background: #ffffff;
+          }
+        }
+        .detail-li.product-earnings {
+          text-align: left;
+          position: relative;
+          .count {
+            font-size: pxToRem(48px);
+            color: #f2403f;
+          }
+          .fs {
+            font-size: pxToRem(36px);
+          }
+          .fs span {
+            font-size: pxToRem(48px);
+          }
+        }
+      }
+    }
+
+    li.product-box-wrapper {
+      padding: 0 pxToRem(20px);
+      background: #f9f9f9;
+      align-items: center;
+      -webkit-align-items: center;
+      .product-wrapper {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        text-align: center;
+        padding: pxToRem(20px);
+        background: #ffffff;
+        .product-name {
+          .product-name-txt {
+            padding-right: pxToRem(20px);
+            border-right: 1px solid #3a3a3a;
+          }
+        }
+      }
+      .product-wrapper.ml-10 {
+        margin-left: pxToRem(11px);
+      }
+      .detail-li.product-earnings {
+        text-align: center;
+      }
+    }
+  }
+}
+.toast {
+  position: absolute;
+  //left: pxToRem(168px);
+  top: pxToRem(-24px);
+  font-size: pxToRem(18px);
+  padding: 0 pxToRem(4px);
+  //padding: pxToRem(5px) pxToRem(11px);
+  min-width:pxToRem(90px);
+  height:pxToRem(40px);
+  text-align: center;
+  line-height: pxToRem(34px);
+  color: #ffffff;
+  font-weight: 200;
+  background: #387fee;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  white-space: nowrap;
+  background: url("../product/imgs/toast@2x.png") no-repeat center;
+  background-size: 100% 100%;
+}
+//.toast:after {
+//  content: '';
+//  position: absolute;
+//  bottom: -7px;
+//  left: 4px;
+//  height: 0;
+//  font-size: 0;
+//  overflow: hidden;
+//  border: 12px solid #387fee;
+//  border-left: 3px solid transparent;
+//  border-right: 7px solid transparent;
+//  border-bottom: 0;
+//}
+
+/**************************理财产品列表 end**********************/
+
+
+/**************************理财产品详情 start**********************/
+.product—detail-container {
+  top:pxToRem(100px);
+  padding-bottom: pxToRem(98px);
+  font-weight: 200;
+  overflow: auto;
+  .detail-wrapper {
+    padding-bottom: pxToRem(20px);
+    overflow: hidden;
+    .product-name {
+      padding: pxToRem(20px) pxToRem(20px) pxToRem(150px);
+      text-align: center;
+      color: #ffffff;
+      font-size: pxToRem(30px);
+      background: #4389f5;
+    }
+
+    .rate-wrapper {
+      background: #ffffff;
+      width: 90%;
+      margin: pxToRem(22px) auto 0;
+      .wrapper {
+        padding: pxToRem(36px) pxToRem(30px) pxToRem(10px);
+        .txt{
+            font-size: pxToRem(24px);
+        }
+      }
+      .rate {
+        position: relative;
+        font-size: pxToRem(36px);
+        color: #ff0000;
+        span {
+          font-size: pxToRem(28px);
+        }
+      }
+      .require-tips {
+        border-top: 1px dotted #c0c0c0;
+        padding: pxToRem(10px) pxToRem(30px);
+        -webkit-box-shadow: 3px 3px 6px #eee;
+        -moz-box-shadow: 3px 3px 6px #eee;
+        box-shadow: 3px 3px 6px #eee;
+      }
+      .require-tips > span {
+        //padding: pxToRem(8px);
+        //margin-right: 20px;
+        //font-size: pxToRem(20px);
+        //line-height: 1px;
+        //color: #4389f5;
+        //border: 1px solid #4389f5;
+        //-webkit-border-radius: 4px;
+        //-moz-border-radius: 4px;
+        //border-radius: 4px;
+        display: inline-block;
+        vertical-align: middle;
+        height:pxToRem(28px);
+        line-height: pxToRem(28px);
+        margin-right: 20px;
+        padding: 0 pxToRem(8px);
+        border: 1px solid rgba(67,137,245,.3);
+        color: #4389f5;
+        font-size: pxToRem(18px);
+        font-weight: 200;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;;
+
+      }
+    }
+    .rate-wrapper-1 {
+      width: 88%;
+      height: pxToRem(20px);
+      margin: pxToRem(-125px) auto 0;
+      background: rgba(250, 250, 250, .18);
+    }
+    .rate-wrapper-2 {
+      width: 85%;
+      height: pxToRem(20px);
+      margin: pxToRem(-26px) auto;
+      background: rgba(250, 250, 250, .18);
+    }
+  }
+  .list-wrapper {
+    background: #cccccc;
+    .list-item {
+      padding: pxToRem(24px);
+      border-bottom: none;
+      .item-txt {
+        font-weight: 600;
+      }
+      .item-right-txt {
+        font-weight: 600;
+        color: #b2b2b2;
+      }
+    }
+  }
+
+  .intro-list {
+    margin: pxToRem(10px) 0;
+    & > li {
+      padding-top: pxToRem(18px);
+      margin-top: pxToRem(20px);
+      background: #ffffff;
+      .content-tit {
+        padding: pxToRem(20px) pxToRem(34px) pxToRem(30px);
+        font-size: pxToRem(24px);
+        line-height: pxToRem(24px);
+        font-weight: 500;
+        color: #3a3a3a;
+        .arrow-right {
+          float: right;
+          color: #4389f5;
+          font-size: pxToRem(20px);
+          padding: 0 pxToRem(30px) 0 pxToRem(20px);
+          background: url("../product/imgs/arrow_down@3x.png") no-repeat right center;
+          background-size: pxToRem(23px) pxToRem(13px);
+
+        }
+        .arrow-right.show {
+          background: url("../product/imgs/arrow_up@3x.png") no-repeat right center;
+          background-size: pxToRem(23px) pxToRem(13px);
+
+        }
+      }
+      .content-tit span:first-child {
+        border-left: 2px solid #3f9bff;
+        padding-left: pxToRem(20px);
+      }
+      .content {
+        display: none;
+        padding: pxToRem(19px) pxToRem(34px);
+        border-top: 1px solid #f9f9f9;
+        line-height: 20px;
+        color: #7e7e7e;
+        .notice {
+          color: #e74849;
+        }
+        /*新元宝收益表格*/
+        ul {
+          border: 1px solid #efefef;
+          li:not(:last-child) {
+            border-bottom: 1px solid #efefef;
+          }
+          li:first-child {
+            color: #4389f5;
+            span{
+              white-space: nowrap;
+            }
+          }
+          li {
+            display: table;
+            width: 100%;
+            text-align: center;
+            span {
+              display: table-cell;
+              width: 33%;
+              padding: pxToRem(20px) 0;
+            }
+            span:not(:last-child) {
+              border-right: 1px solid #efefef;
+            }
+            span:first-child {
+              color: #4389f5;
+            }
+          }
+
+        }
+        .right {
+          text-align: right;
+          padding-top: pxToRem(18px);
+        }
+        .thirtytender-list li span{
+          width:25%;
+        }
+
+        /*新手标的示意图*/
+        .wrapper {
+          margin-top: pxToRem(100px);
+          text-indent: 0;
+          //border-top: 3px solid #4389f5;
+          text-align: center;
+          div {
+            position: relative;
+            display: inline-block;
+            width: 20%;
+            margin-left: -3px;
+            margin-top: pxToRem(-20px);
+            vertical-align: top;
+            .line {
+              border-top: 3px solid #4389f5;
+              position: absolute;
+              left: 50%;
+              top: pxToRem(12px);
+              width: 100%;
+            }
+            .circle {
+              position: relative;
+              display: block;
+              width: pxToRem(28px);
+              height: pxToRem(28px);
+              margin: 0 auto pxToRem(19px);
+              border: 2px solid #4389f5;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              border-radius: 50%;
+              background: #ffffff;
+            }
+            .txt {
+              display: block;
+              color: #666666;
+              white-space: nowrap;
+            }
+            .desc {
+              display: block;
+              color: #cecece;
+            }
+          }
+          p {
+            width: 40%;
+            margin: 0 auto pxToRem(30px);
+            border: 2px solid #4389f5;
+            border-bottom: none;
+            height: pxToRem(15px);
+            span {
+              display: block;
+              margin-top: pxToRem(-44px);
+              color: #4389f5;
+            }
+          }
+        }
+      }
+
+      .content.show {
+        display: block;
+      }
+    }
+  }
+  //}
+
+  .main-bottom {
+    padding: pxToRem(32px) pxToRem(20px) pxToRem(78px);
+    .wrapper {
+      .slogan {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        text-align: center;
+        .slogan-icon {
+          width: pxToRem(55px);
+          height: pxToRem(60px);
+          margin: 0 auto;
+        }
+        .standard-icon {
+          background: url("../product/imgs/standard_icon.png") no-repeat center;
+          background-size: 100%;
+        }
+        .bank-icon {
+          background: url("../product/imgs/bank_icon2.png") no-repeat center;
+          background-size: 100%;
+        }
+        .fair-icon {
+          background: url("../product/imgs/fair_icon.png") no-repeat center;
+          background-size: 100%;
+        }
+        .slogan-txt {
+          margin-top: pxToRem(8px);
+          color: #4389f5;
+        }
+      }
+    }
+    p.tips {
+      padding: pxToRem(24px) 0;
+      text-align: center;
+      color: #7e7e7e;
+    }
+  }
+}
+
+.newbie-container{
+  top:0;
+  overflow: auto;
+}
+
+.purchased-alert {
+  background: rgba(178, 178, 178, .3);
+  z-index: 3;
+  display: none;
+  .alert-content-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: pxToRem(560px);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    .alert-content {
+      padding: pxToRem(67px) 0 pxToRem(70px);
+      -webkit-border-radius: pxToRem(10px);
+      -moz-border-radius: pxToRem(10px);
+      border-radius: pxToRem(10px);
+      background: #ffffff;
+      .close-btn {
+        position: absolute;
+        right: pxToRem(34px);
+        top: pxToRem(27px);
+        width: pxToRem(26px);
+        height: pxToRem(26px);
+        background: url("../product/imgs/close_icon.png") no-repeat center;
+        background-size: pxToRem(26px) pxToRem(26px);
+      }
+      .alert-bg {
+        width: pxToRem(350px);
+        height: pxToRem(245px);
+        margin: 0 auto;
+        background: url("../product/imgs/alert_bg.png") no-repeat center;
+        background-size: pxToRem(350px) pxToRem(245px);
+      }
+      p {
+        margin-top: pxToRem(67px);
+        color: #2b2b2b;
+        font-size: pxToRem(30px);
+        text-align: center;
+      }
+    }
+    .div-btn {
+      margin-top: pxToRem(39px);
+      button {
+        -webkit-border-radius: pxToRem(39px);
+        -moz-border-radius: pxToRem(39px);
+        border-radius: pxToRem(39px);
+      }
+    }
+  }
+}
+.purchased-alert.block{
+  display: block;
+}
+
+/**************************理财产品详情 end**********************/
+
+/**************************产品加入 start**********************/
+.product—purchase-container {
+  top: 0;
+  padding-bottom: pxToRem(108px);
+  overflow: auto;
+  .product-top {
+    padding: pxToRem(39px) pxToRem(20px) pxToRem(57px);
+    color: #ffffff;
+    background: linear-gradient(bottom, #67a2f4 20%, #3682ed);
+    background: -webkit-linear-gradient(top, #67a2f4 20%, #3682ed);
+    background: -moz-linear-gradient(top, #67a2f4 20%, #3682ed);
+    background: -ms-linear-gradient(top, #67a2f4 20%, #3682ed);
+    background: -o-linear-gradient(top, #67a2f4 20%, #3682ed);
+    .product-name {
+      font-size: pxToRem(30px);
+      margin-bottom: pxToRem(23px);
+    }
+    .product-require-wrapper {
+      .require-tips {
+        padding: pxToRem(6px) pxToRem(14px);
+        margin-right: 20px;
+        font-size: pxToRem(24px);
+        line-height: pxToRem(24px);
+        border: 1px solid #ffffff;
+      }
+    }
+    .product-earnings-txt {
+      margin: pxToRem(57px) auto pxToRem(27px);
+      text-align: center;
+      font-size: pxToRem(20px);
+    }
+    .rate {
+      position: relative;
+      text-align: center;
+      font-size: pxToRem(40px);
+      span {
+        font-size: pxToRem(44px);
+        font-weight: 600;
+      }
+    }
+  }
+  .product-name {
+    text-align: center;
+  }
+  .lock-data {
+    margin-top: pxToRem(37px);
+    text-align: center;
+  }
+  .purchase {
+    .list-item {
+      padding: pxToRem(28px) pxToRem(18px);
+      position: relative;
+      .input-wrapper {
+        display: inline-block;
+        vertical-align: middle;
+        //padding: pxToRem(12px) 0;
+        margin-left: pxToRem(50px);
+        button {
+          background: none;
+          font-size: pxToRem(48px);
+          padding: 0 pxToRem(20px);
+          color: #4389f5;
+        }
+        button:disabled {
+          color: #c4c4c4;
+
+        }
+        input {
+          padding: pxToRem(10px) 0;
+          text-align: center;
+          border: 1px solid #bfbfbf;
+          background: #ffffff;
+          color: #bcbcbc;
+          line-height: pxToRem(24px);
+          font-weight: 200;
+        }
+      }
+      .all-btn {
+        position: absolute;
+        right: pxToRem(20px);
+        top: 50%;
+        background: none;
+        font-size: pxToRem(24px);
+        line-height: pxToRem(24px);
+        padding: 0 pxToRem(20px);
+        color: #ff2d4d;
+      }
+      .max-count-tips {
+        line-height: pxToRem(24px);
+        color: #ff2d4d;
+        text-align: center;
+      }
+      .pay-count {
+        color: #ff2d4d;
+        font-weight: 600;
+      }
+    }
+    .list-item.mt-10 {
+      margin-top: pxToRem(20px);
+    }
+    .list-item.pd-10 {
+      padding: pxToRem(20px) pxToRem(18px);
+    }
+    .item-txt {
+      font-weight: 600;
+    }
+  }
+  .confirm-tips {
+    position: relative;
+    padding: pxToRem(30px);
+    color: #3a3a3a;
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      left: pxToRem(60px);
+    }
+    label {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      width: pxToRem(24px);
+      height: pxToRem(24px);
+      .checkbox {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../register/imgs/check_box@3x.png") no-repeat;
+        background-size: contain;
+      }
+      .checkbox.checked {
+        background: url("../register/imgs/checked@3x.png") no-repeat;
+        background-size: cover;
+      }
+      input[type=checkbox] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+/**************************产品加入 end**********************/
+
+/**************************加入成功 start**********************/
+.purchase-success-container {
+  top: 0;
+  overflow: auto;
+  .wrapper {
+    padding: pxToRem(150px) pxToRem(10px) pxToRem(124px) pxToRem(60px);
+    background: #ffffff;
+    .content-li {
+      position: relative;
+      padding-bottom: pxToRem(10px);
+      p {
+        padding-left: pxToRem(77px);
+        color: #7e7e7e;
+        line-height: pxToRem(50px);
+      }
+      p.bold-font {
+        font-size: pxToRem(28px);
+        font-weight: 600;
+        color: #3a3a3a;
+        position: relative;
+      }
+      .line-bg {
+        position: absolute;
+        left: pxToRem(17px);
+        top: pxToRem(50px);
+        width: pxToRem(5px);
+        height: pxToRem(125px);
+        background: url("../product/imgs/line.png") no-repeat center;
+        background-size: 100% 100%;
+      }
+      .line-bg-reverse {
+        -webkit-transform: rotateX(180deg);
+        -moz-transform: rotateX(180deg);
+        -ms-transform: rotateX(180deg);
+        -o-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+        width: pxToRem(4px);
+      }
+    }
+    .congratulate-content {
+      background: url("../product/imgs/light_icon.png") no-repeat left top;
+      background-size: pxToRem(39px) pxToRem(41px);
+    }
+    .calculate-content {
+      background: url("../product/imgs/calculate_icon.png") no-repeat left top;
+      background-size: pxToRem(39px) pxToRem(38px);
+    }
+    .income-content {
+      background: url("../product/imgs/income_icon.png") no-repeat left top;
+      background-size: pxToRem(39px) pxToRem(39px);
+    }
+
+  }
+  .div-btn {
+    padding: pxToRem(64px) pxToRem(20px);
+    button {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      font-weight: 600;
+    }
+    button.detail-btn {
+      margin-top: pxToRem(20px);
+      background: #ffffff;
+      color: #4389f5;
+      border: 1px solid #4389f5;
+    }
+  }
+}
+
+/*******************************使用红包********************************/
+.usered-container{
+  top:pxToRem(88px);
+  margin-top: 1px;
+  background: #ffffff;
+  overflow: auto;
+}
+.red-list {
+  padding: pxToRem(40px) pxToRem(20px) 0;
+  .red-list-item {
+    position: relative;
+    padding: pxToRem(32px) pxToRem(28px) 0;
+    margin-bottom: pxToRem(20px);
+    -webkit-box-shadow: 1px 1px 5px 1px #dddddd;
+    -moz-box-shadow: 1px 1px 5px 1px #dddddd;
+    box-shadow: 1px 1px 5px 1px #dddddd;
+    align-items: center;
+    color: #616161;
+    font-weight: 200;
+    overflow: hidden;
+    .item-left {
+      -webkit-flex: 1;
+      -moz-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      line-height: pxToRem(40px);
+    }
+    .item-right {
+      text-align: center;
+    }
+    .red-packet {
+      font-size: pxToRem(38px);
+      font-weight: 600;
+      color: #ff2d4d;
+    }
+    .red-name {
+      color: #3a3a3a;
+      font-weight: 600;
+    }
+    .red-range {
+      border-top: 1px dotted #d4d4d4;
+      margin-top: pxToRem(18px);
+      padding: pxToRem(15px) 0;
+      color: #d4d4d4;
+      word-break: break-all;
+      white-space: nowrap;
+    }
+  }
+}
+
+.checked-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: pxToRem(60px);
+  height: pxToRem(55px);
+  background: url("../product/imgs/checked_red@3x.png") no-repeat;
+  background-size: cover;
+  display: none;
+}
+
+.checked-bg.block {
+  display: block;
+}
+
+.red-list-item.overdue-red-list-wrapper, .red-list-item.used-list-wrapper {
+  color: #afafaf;
+  .red-name {
+    color: #acacac;
+  }
+  .red-packet {
+    color: #acacac;
+  }
+}
+
+
+/*******************常见问题*****************/
+.main-list{
+  &>.faq-item{
+    padding:pxToRem(18px) 0 0;
+    margin-top: pxToRem(20px);
+    background: #ffffff;
+    &>p{
+      position: relative;
+      padding: pxToRem(20px) pxToRem(34px) pxToRem(30px);
+      font-size: pxToRem(24px);
+      line-height: pxToRem(24px);
+      color: #3a3a3a;
+      .arrow-down-icon{
+        position: absolute;
+        right:pxToRem(4px);
+        top:pxToRem(14px);
+        padding:0 pxToRem(30px);
+        height: pxToRem(44px);
+        background: url(../product/imgs/arrow_down_gray.png) no-repeat center;
+        background-size: pxToRem(44px) pxToRem(44px);
+      }
+      .arrow-down-icon.up-icon{
+        background: url(../product/imgs/arrow_up_gray.png) no-repeat center;
+        background-size: pxToRem(44px) pxToRem(44px);
+      }
+    }
+    .content{
+      display: none;
+      padding:pxToRem(32px);
+      border-top: 1px solid #f9f9f9;
+      font-weight: 200;
+      &>.li{
+        background: #ffffff;
+        margin-top:pxToRem(10px);
+        padding:0 pxToRem(20px);
+      }
+      .question{
+        line-height: pxToRem(60px);
+        color: #4389f5;
+      }
+      .answer{
+        line-height: pxToRem(48px);
+      }
+    }
+    .content.show{
+      display: block;
+    }
+  }
+}
+
+/******************风险提示函***********************/
+.hint-container{
+  top:pxToRem(88px);
+  margin-top:1px;
+  padding:pxToRem(20px) pxToRem(20px) pxToRem(200px);
+  background: #ffffff;
+  overflow: auto;
+  p{
+    text-indent: 24px;
+    line-height: 24px;
+  }
+  .center{
+    text-align: center;
+  }
+  .bold{
+    font-weight: 600;
+    text-indent: 0;
+  }
+  .bold.indent{
+    text-indent: 24px;
+  }
+
+}

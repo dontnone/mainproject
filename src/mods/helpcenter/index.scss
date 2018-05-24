@@ -1,0 +1,75 @@
+$uiWidth: 75px;
+
+@function pxToRem($px) {
+  @return $px / $uiWidth * 1rem;
+}
+.help-container{
+  top:pxToRem(88px);
+  padding-bottom: pxToRem(50px);
+  margin-top: 1px;
+  overflow: auto;
+  font-weight: 200;
+  .tab-content{
+    .list-content{
+      margin-bottom:pxToRem(10px);
+    }
+    .list-tit{
+      font-weight: 600;
+      color: #5999f8;
+      padding:pxToRem(24px) pxToRem(30px);
+      margin-bottom: 1px;
+      border-left:5px solid #4389f5;
+      background: #ffffff;
+    }
+  }
+  .question{
+    margin-bottom: 1px;
+    color: #3a3a3a;
+    background: #ffffff;
+    &>p{
+      position: relative;
+      padding:pxToRem(24px) pxToRem(20px);
+      font-size: pxToRem(24px);
+      line-height: pxToRem(24px);
+      color: #3a3a3a;
+    }
+    .arrow-down-icon{
+      position: absolute;
+      right:pxToRem(4px);
+      top:0;
+      padding:0 pxToRem(30px);
+      height: 100%;
+      background: url(../product/imgs/arrow_up_gray.png) no-repeat center;
+      background-size: pxToRem(44px) pxToRem(44px);
+    }
+    .arrow-down-icon.up-icon{
+      background: url(../product/imgs/arrow_down_gray.png) no-repeat center;
+      background-size: pxToRem(44px) pxToRem(44px);
+    }
+    .answer{
+      display: none;
+      background: #f9f9f9;
+      padding:pxToRem(30px) pxToRem(20px);
+      border-top: 1px solid #f9f9f9;
+      font-weight: 200;
+      line-height: pxToRem(40px);
+      color: #141414;
+    }
+    .answer.show{
+      display: block;
+    }
+    a{
+      color: #3a3a3a;
+    }
+  }
+}
+
+.goto-home{
+  position: fixed;
+  right:pxToRem(30px);
+  bottom:pxToRem(30px);
+  width:pxToRem(96px);
+  height:pxToRem(96px);
+  background: url("../helpcenter/imgs/gohome@3x.png") no-repeat center;
+  background-size: cover;
+}

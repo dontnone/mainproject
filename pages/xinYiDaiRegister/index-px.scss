@@ -1,0 +1,485 @@
+@import '../../node_modules/antd-mobile/lib/style/index.css';
+@import '../../node_modules/antd-mobile/lib/toast/style/index.css';
+@import '../../node_modules/antd-mobile/lib/modal/style/index.css';
+@import '../../node_modules/antd-mobile/lib/button/style/index.css';
+@import '../../node_modules/antd-mobile/lib/icon/style/index.css';
+@import "../../static/html/css/base.css";
+
+$imgPath: '/static/mods/xinYiDaiRegister/imgs/';
+
+
+
+h1{
+  font-weight: normal
+}
+.hide{
+  display: none;
+}
+
+.show{
+  display:block;
+}
+.gray{
+  color: #ccc!important;
+}
+.phoneCode{
+  input{
+    border: 1px solid #f1f1f1;
+    padding: 0.25rem;
+    width: 60%;
+    float: left;
+    box-sizing: border-box;
+  }
+  img{
+    width: 40%;
+    height: 0.99rem;
+    float: right;
+  }
+}
+
+.reg-setPwd {
+  background-color: #6e80ff;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  .reg-setPwd-center {
+    width: 479px;
+    height: 200px;
+    margin: 223px auto auto auto;
+    .reg-setPwd-text {
+      font-family: HiraginoSansGB-W3;
+      font-size: 24px; /*px*/
+      font-weight: normal;
+      font-stretch: normal;
+      line-height: 37px;
+      letter-spacing: 0px;
+      color: #ffffff;
+    }
+    .reg-setPwd-pwd {
+      width: 477px;
+      height: 65px;
+      border-radius: 10px;
+      border: solid 1px #ffffff; /*no*/
+      background-color: #6e80ff;
+      position: relative;
+      margin-top:43px;
+      .reg-setPwd-icon {
+        position: absolute;
+        left: 24px;
+        top: 13px;
+        bottom: 16px;
+        width: 30px;
+        height: 36px;
+        background: url($imgPath + "lock.png") no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        &::after {
+          position: absolute;
+          content: ' ';
+          width: 1px; /*no*/
+          height: 47px;
+          background-color: #ffffff;
+          right: -16px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+      .reg-setPwd-value{
+        width:388px;
+        height:100%;
+        background-color: #6e80ff;
+        padding-left:89px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        color:white;
+        &::placeholder{
+          color:white;
+          font-family: HiraginoSansGB-W3;
+          font-size: 24px; /*px*/
+          font-weight: normal;
+          font-stretch: normal;
+          line-height: 37px;
+          letter-spacing: 0px;
+          color: #ffffff;
+        }
+      }
+
+    }
+    .reg-submit-btn-finish{
+      margin-top:53px;
+      width: 477px;
+      height: 65px;
+      background-color: #4f3eff;
+      border-radius: 10px;
+      font-family: HiraginoSansGB-W3;
+      font-size: 28px;
+      font-weight: normal;
+      font-stretch: normal;
+      line-height: 65px;
+      letter-spacing: 5px;
+      color: #ffffff;
+      text-align: center;
+    }
+  }
+}
+
+  .xy-register-header {
+    width: 100%;
+    height: 860px;
+    background: url($imgPath + "reg-header.png") no-repeat;
+    background-size: cover;
+    position: relative;
+    .reg-box {
+      width: 665px;
+      height: 412px;
+      background: #f1f3ff url($imgPath + "reg-box-bg.png") no-repeat;
+      background-size: cover;
+      border-radius: 8px;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 400px;
+      .reg-content {
+        margin: 39px auto 39px auto;
+        width: 479px;
+        height: 334px;
+        .phone-num {
+          width: 477px;
+          height: 65px;
+          border-radius: 10px;
+          border: solid 1px #6e80ff; /*no*/
+          position: relative;
+          .reg-phone-icon {
+            position: absolute;
+            left: 28px;
+            top: 12px;
+            bottom: 12px;
+            width: 23px;
+            height: 40px;
+            background-image: url($imgPath + "phone-icon.png");
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+            &::after {
+              position: absolute;
+              content: ' ';
+              width: 1px; /*no*/
+              height: 47px;
+              background-color: #6e80ff;
+              right: -20px;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+            }
+          }
+          .reg-phone-num, input {
+            width: 477px - 87;
+            height: 100%;
+            border-radius: 10px;
+            padding-left: 87px;
+            &::placeholder {
+              width: 214px;
+              font-family: HiraginoSansGB-W3;
+              font-size: 24px; /*px*/
+              font-weight: normal;
+              font-stretch: normal;
+              line-height: 47px; /*px*/
+              letter-spacing: 0px;
+              color: #a6b1fc;
+            }
+          }
+        }
+        .phone-security-content {
+          width: 100%;
+          height: 67px;
+          margin-top: 40px;
+          .phone-security-num {
+            -webkit-border-radius: 10px;
+            display: inline-block;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            border: solid 1px #6e80ff; /*no*/
+            width: 256px;
+            height: 65px;
+            position: relative;
+            .reg-security-num {
+              width: 256px - 87;
+              height: 100%;
+              -webkit-border-radius: 10px;
+              -moz-border-radius: 10px;
+              border-radius: 10px;
+              padding-left: 87px;
+              &::placeholder {
+                width: 214px;
+                font-family: HiraginoSansGB-W3;
+                font-size: 24px; /*px*/
+                font-weight: normal;
+                font-stretch: normal;
+                line-height: 47px; /*px*/
+                letter-spacing: 0px;
+                color: #a6b1fc;
+              }
+            }
+            .reg-security-icon {
+              position: absolute;
+              left: 21px;
+              top: 0px;
+              bottom: 0px;
+              width: 36px;
+              height: 24px;
+              margin: auto;
+              background-image: url($imgPath + "reg-box-email-icon.png");
+              background-repeat: no-repeat;
+              -webkit-background-size: cover;
+              background-size: cover;
+              &::after {
+                position: absolute;
+                content: ' ';
+                width: 1px; /*no*/
+                height: 47px;
+                background-color: #6e80ff;
+                right: -14px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+              }
+            }
+          }
+          .reg-security-num-btn {
+            display: inline-block;
+            margin-left: 4px;
+            margin-top: -3px;
+            width: 211px;
+            height: 67px;
+            background-color: #6e80ff;
+            border-radius: 10px;
+            text-align: center;
+            vertical-align: middle;
+            font-family: HiraginoSansGB-W3;
+            font-size: 24px; /*px*/
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 65px;
+            letter-spacing: 0px;
+            color: #ffffff;
+          }
+        }
+        .phone-submit-btn {
+          width: 388px;
+          height: 77px;
+          margin: 39px auto 0px auto;
+          background-image: linear-gradient(0deg,
+                  #ff9b0c 0%,
+                  #ff7517 100%),
+          linear-gradient(
+                          #ff0000,
+                          #ff0000);
+          background-blend-mode: normal,
+          normal;
+          border-radius: 38px;
+          font-family: HiraginoSansGB-W6;
+          font-size: 36px;
+          font-weight: normal;
+          font-stretch: normal;
+          line-height: 77px;
+          text-align: center;
+          vertical-align: middle;
+          letter-spacing: 13px;
+          color: #ffffff;
+        }
+        .reg-download-app {
+          margin: 18px auto;
+          text-align: center;
+          vertical-align: middle;
+          .reg-download-notice {
+            width: 115px;
+            height: 24px;
+            font-family: HiraginoSansGB-W3;
+            font-size: 24px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 37px;
+            letter-spacing: 0px;
+            color: #a6b1fc;
+          }
+          .reg-download-link {
+            margin-left: 20px;
+            width: 192px;
+            height: 23px;
+            font-family: HiraginoSansGB-W3;
+            font-size: 24px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 37px;
+            letter-spacing: 0px;
+            color: #6e80ff;
+            border-bottom: solid 1px #6e80ff; /*no*/
+          }
+        }
+      }
+    }
+  }
+
+  .reg-broadcast {
+    background-color: #e0e4ff;
+    height: 432px;
+    .reg-bc-item {
+      width: 49.7%;
+      background-color: #eef0fd;
+      display: inline-block;
+      margin-bottom: 4px;
+      height: 214px;
+      position: relative;
+      .reg-bc-center {
+        height: 112px;
+        width: 305px;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        margin: auto;
+        padding-left: 43px;
+        .reg-bc-icon {
+          width: 112px;
+          height: 112px;
+          background-image: linear-gradient(90deg,
+                  #6f7dff 0%,
+                  #4f3eff 100%),
+          linear-gradient(
+                          #e0e4ff,
+                          #e0e4ff);
+          background-blend-mode: normal,
+          normal;
+          border-radius: 8px;
+          display: inline-block;
+          position: relative;
+          .reg-icon {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            margin: auto;
+          }
+          .time-icon {
+            width: 67px;
+            height: 75px;
+          }
+        }
+        .reg-bc-text-sp {
+          height: 89px !important;
+        }
+        .reg-bc-text {
+          display: inline-block;
+          height: 62px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto auto auto 17px;
+          .reg-bc-title {
+            font-family: HiraginoSansGB-W6;
+            font-size: 32px; /*px*/
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 37px;
+            letter-spacing: 3px;
+            color: #ff8305;
+          }
+          .reg-bc-p {
+            font-family: HiraginoSansGB-W3;
+            font-size: 22px; /*px*/
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 30px;
+            letter-spacing: 0px;
+            color: #5f5eff;
+          }
+        }
+
+      }
+      &:nth-child(odd) {
+        float: right;
+      }
+      &:nth-child(even) {
+        float: left;
+      }
+      &:nth-child(3), &:nth-child(4) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .reg-flow {
+    width: 750px;
+    height: 584px;
+    background: url($imgPath + "flow.png") no-repeat;
+    background-size: cover;
+  }
+
+  .reg-info {
+    height: 236px;
+    width: 100%;
+    text-align: center;
+    margin-top: 31px;
+    .reg-info-p {
+      width: 100%;
+      text-align: center;
+      font-family: HiraginoSansGB-W3;
+      font-size: 20px; /*px*/
+      font-weight: normal;
+      font-stretch: normal;
+      line-height: 32px;
+      letter-spacing: 0px;
+      color: #8ea2f9;
+    }
+    margin-bottom: 110px;
+  }
+
+  .reg-bottom-btn {
+    width: 750px;
+    height: 110px;
+    position: fixed;
+    bottom: 0px;
+    background-image: linear-gradient(0deg,
+            #ff9b0c 0%,
+            #ff7517 100%),
+    linear-gradient(
+                    #00ffff,
+                    #00ffff);
+    background-blend-mode: normal,
+    normal;
+    .reg-apply-btn {
+      a{
+        width: 478px;
+        height: 77px;
+        margin: auto auto;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background-image: linear-gradient(90deg,
+                #6f7dff 0%,
+                #4f3eff 100%),
+        linear-gradient(
+                        #ff0000,
+                        #ff0000);
+        background-blend-mode: normal,
+        normal;
+        border-radius: 38px;
+        font-family: HiraginoSansGB-W6;
+        font-size: 40px;
+        font-weight: normal;
+        font-stretch: normal;
+        line-height: 77px;
+        letter-spacing: 15px;
+        text-align: center;
+        vertical-align: middle;
+        color: #ffffff;
+      }
+    }
+  }

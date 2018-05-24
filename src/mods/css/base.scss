@@ -1,0 +1,534 @@
+/******************reset start******************/
+$uiWidth:75px;
+
+@function pxToRem($px){
+  @return $px / $uiWidth * 1rem;
+}
+
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling : touch;
+}
+
+/* 禁止缩放表单 */
+input[type="submit"], input[type="reset"], input[type="button"], input {
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+/* 取消链接高亮  */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: pxToRem(24px);
+}
+
+/* 设置HTML5元素为块 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
+  display: block;
+  -ms-interpolation-mode: bicubic;/*为了照顾ie图片缩放失真*/
+}
+
+/* 初始化 */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+}
+em, i {
+  font-style: normal;
+}
+ul,li{
+  list-style-type: none;
+}
+button{
+  outline: none;
+  border:none;
+}
+strong {
+  font-weight: normal;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+a {
+  text-decoration: none;
+  color: #969696;
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+ul, ol {
+  list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-family: 'Microsoft YaHei',sans-serif;
+}
+img {
+  border: none;
+}
+input{
+  font-family: 'Microsoft YaHei',sans-serif;
+}
+/*单行溢出*/
+.one-txt-cut{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/*多行溢出 手机端使用*/
+.txt-cut{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+/* 移动端点击a链接出现蓝色背景问题解决 */
+a:link,a:active,a:visited,a:hover {
+  background: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+::-moz-placeholder{
+  color: #bdbdbd;
+}
+::-webkit-input-placeholder{
+  color: #bdbdbd;
+}
+:-ms-input-placeholder{
+  color: #bdbdbd;
+}
+/******************reset end******************/
+
+
+/*******************common style***************/
+html,body{
+  width:100%;
+  height:100%;
+  background-color: #f9f9f9;
+  font-family: 'Lantinghei SC','Microsoft YaHei','宋体', Tahoma, Arial, sans-serif;
+  font-size: pxToRem(24px);
+}
+/*download-app-header*/
+.download-app-header,.home-header{
+  width: 100%;
+  height: pxToRem(98px);
+  position: relative;
+  z-index:1;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(241,241,241,.3);
+  .logo-wrapper {
+    position: absolute;
+    left: pxToRem(30px);
+    top: pxToRem(24px);
+    div {
+      float: left;
+    }
+    .logo {
+      margin-right: pxToRem(17px);
+      width: pxToRem(62px);
+      height: pxToRem(62px);
+      background:url("../home/imgs/app-logo@3x.png") no-repeat center ;
+      background-size: pxToRem(62px) pxToRem(62px);
+    }
+    .header-tit {
+      font-weight: 600;
+      .app-name {
+        font-size: pxToRem(24px);
+        color: #373737;
+      }
+      .app-slogan {
+        font-size: pxToRem(20px);
+        color: #b8b8b8;
+      }
+    }
+  }
+  .header-right {
+    position: absolute;
+    top: 0;
+    right: pxToRem(40px);
+    height: 100%;
+    line-height: pxToRem(98px);
+    .open-app-btn {
+      //width: pxToRem(120px);
+      //height: pxToRem(58px);
+      padding:pxToRem(15px) pxToRem(14px);
+      //font-size: 12px;
+      font-size: pxToRem(24px);
+      font-weight: 200;
+      background-color: rgb(67, 137, 245);
+      color: #fff;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;;
+    }
+  }
+}
+
+/*common-header*/
+.common-header{
+  height:pxToRem(88px);
+  background: #ffffff;
+  position: relative;
+  z-index:1;
+  box-shadow: 0 1px 2px rgba(241,241,241,.3);
+  .arrow-left-icon{
+    position: absolute;
+    left:pxToRem(19px);
+    width:pxToRem(19px);
+    height:100%;
+    vertical-align: middle;
+    background: url("../login/imgs/arrow_left.png") no-repeat center;
+    background-size: contain;
+  }
+  .common-header-tit{
+    height:100%;
+    line-height: pxToRem(88px);
+    text-align: center;
+    //font-size: 15px;
+    font-size: pxToRem(30px);
+    //font-weight: 600;
+    color: #000000;
+  }
+  .header-right-btn{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    top: 0;
+    padding: 0 pxToRem(20px);
+    line-height: pxToRem(88px);
+    color: #4389f5;
+    font-size:pxToRem(24px)
+  }
+}
+/*common-header*/
+
+
+/*footer-tab*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: pxToRem(98px);
+  background-color: #ffffff;
+  border-top:1px solid #e8e8e8;
+  .footer-tab {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    font-size: pxToRem(24px);
+    .tab-link {
+      flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      font-size: pxToRem(24px);
+      .tab-link-icon {
+        display: block;
+        width: pxToRem(40px);
+        height: pxToRem(40px);
+        margin: 0 auto pxToRem(6px);
+      }
+      .tab-home {
+        background: url("../home/imgs/home_icon@3x.png") no-repeat;
+        background-size: pxToRem(40px) pxToRem(40px);
+      }
+      .tab-financial {
+        background: url("../home/imgs/financial_icon@3x.png") no-repeat;
+        background-size: pxToRem(40px) pxToRem(40px);
+      }
+      .tab-my-xxd {
+        background: url("../home/imgs/my_xxd_icon@3x.png") no-repeat;
+        background-size: pxToRem(36px) pxToRem(40px);
+      }
+    }
+    .tab-link-txt{
+      color: #6c6c6c;
+    }
+    .tab-link-act {
+      .tab-link-txt{
+        color: #387fee;
+      }
+      .tab-home {
+        background: url("../home/imgs/home_icon_act@3x.png") no-repeat;
+        background-size: pxToRem(40px) pxToRem(40px);
+      }
+      .tab-financial {
+        background: url("../home/imgs/financial_icon_act@3x.png") no-repeat;
+        background-size: pxToRem(40px) pxToRem(40px);
+      }
+      .tab-my-xxd {
+        background: url("../home/imgs/my_xxd_icon_act@3x.png") no-repeat;
+        background-size: pxToRem(36px) pxToRem(40px);
+      }
+    }
+  }
+}
+/*footer-tab*/
+
+.xxd-xl-btn{
+  width:100%;
+  padding:pxToRem(24px) 0;
+  background: #3682ed;
+  color: #ffffff;
+  line-height: pxToRem(30px);
+  font-size: pxToRem(30px);
+  font-weight: 200;
+}
+.xxd-xl-btn:disabled{
+  background: #95b9f1 !important;
+}
+button{
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;;
+}
+.div-btn,.div-login-btn,.div-button{
+  button:disabled{
+    background: #95b9f1
+  }
+}
+
+
+.xxd-common-list{
+  .list-item {
+    position: relative;
+    //margin-bottom: 1px;
+    border-bottom: 1px solid #f2f2f2;
+    padding: pxToRem(28px) pxToRem(30px) pxToRem(28px) pxToRem(32px);
+    font-weight: 200;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  .item-icon {
+    padding: pxToRem(15px);
+  }
+  .item-txt {
+    margin-left: pxToRem(19px);
+    font-size: pxToRem(24px);
+
+    color: #3a3a3a;
+  }
+  .item-right-txt {
+    //position: absolute;
+    //right: pxToRem(50px);
+    float: right;
+    font-size: pxToRem(24px);
+    padding:0 pxToRem(30px);
+    top: pxToRem(30px);
+    color: #3a3a3a;
+  }
+  .arrow-right-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 0 pxToRem(30px);
+    background: url("../mypurse/imgs/arrow_right_icon.png") no-repeat center;
+    background-size: pxToRem(15px) pxToRem(27px);
+  }
+}
+.position-a{
+  position: absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
+}
+.div-bottom-btn{
+  position: fixed;
+  bottom:0;
+  width:100%;
+  button.xxd-xl-btn{
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+  }
+}
+.link-color{
+  color: #4389f5;
+}
+
+.dis-flex-row{
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.dis-flex-column{
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+
+.tab-wrapper {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  padding: 0 pxToRem(20px);
+  //-webkit-box-shadow: 0 1px 5px 0px #f7f7f8;
+  //-moz-box-shadow: 0 1px 5px 0px #f7f7f8;
+  //box-shadow: 0 1px 5px 0px #f7f7f8;
+  border-top: 1px solid #f7f7f8;
+  border-bottom: 1px solid #f7f7f8;
+  background: #ffffff;
+  .tab-link {
+    flex: 1;
+    padding: 0 pxToRem(40px);
+    text-align: center;
+    a {
+      display: inline-block;
+      padding: pxToRem(32px) pxToRem(32px);
+      font-size: pxToRem(26px);
+      line-height: pxToRem(26px);
+      color: #000000;
+    }
+  }
+  .tab-link-act {
+    a {
+      border-bottom: 1px solid #4389f5;
+      color: #4389f5;
+    }
+  }
+}
+
+/*返回首页悬浮按钮*/
+.goto-home{
+  position: fixed;
+  right:pxToRem(30px);
+  bottom:pxToRem(158px);
+  width:pxToRem(96px);
+  height:pxToRem(96px);
+  background: url("../helpcenter/imgs/gohome@3x.png") no-repeat center;
+  background-size: cover;
+}
+
+
+/*银行卡片公共*/
+.bank-card-border{
+  margin-top:pxToRem(62px);
+  padding:pxToRem(28px) pxToRem(30px) pxToRem(30px);
+  overflow: hidden;
+  position: relative;
+  .bank-logo{
+    display: inline-block;
+    width:pxToRem(68px);
+    height:pxToRem(68px);
+    border:2px solid #efefef;
+    vertical-align: middle;
+    -webkit-border-radius: 50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    border-radius:50%;
+    img{
+      width:100%;
+      height:100%;
+    }
+  }
+  .zIndex-wrapper{
+    position: relative;
+    z-index: 1;
+  }
+  img.bank-bg{
+    width:100%;
+    height:100%;
+  }
+  .bank-card{
+    display: inline-block;
+    margin-left:pxToRem(56px);
+    vertical-align: middle;
+    color: #3a3a3a;
+    .bank-name{
+      padding-bottom:pxToRem(22px);
+      font-size: pxToRem(28px);
+    }
+    .bank-card-number{
+      font-size: pxToRem(24px);
+    }
+    .card-status{
+      font-size: pxToRem(24px);
+      color: #e60012;
+    }
+  }
+}
+
+//使用之前需注意，toast父元素需要相对定位
+//.toast {
+//  position: absolute;
+//  //left: pxToRem(168px);
+//  top: pxToRem(-34px);
+//  font-size: pxToRem(18px);
+//  padding: pxToRem(5px) pxToRem(11px);
+//  color: #ffffff;
+//  font-weight: 200;
+//  background: #387fee;
+//  -webkit-border-radius: 3px;
+//  -moz-border-radius: 3px;
+//  border-radius: 3px;
+//  white-space: nowrap;
+//}
+//.toast:after {
+//  content: '';
+//  position: absolute;
+//  bottom: -7px;
+//  left: 4px;
+//  height: 0;
+//  font-size: 0;
+//  overflow: hidden;
+//  border: 12px solid #387fee;
+//  border-left: 3px solid transparent;
+//  border-right: 7px solid transparent;
+//  border-bottom: 0;
+//}
+.toast {
+  position: absolute;
+  //left: pxToRem(168px);
+  top: pxToRem(-24px);
+  font-size: pxToRem(18px);
+  padding: 0 pxToRem(4px);
+  //padding: pxToRem(5px) pxToRem(11px);
+  min-width:pxToRem(90px);
+  height:pxToRem(40px);
+  text-align: center;
+  line-height: pxToRem(34px);
+  color: #ffffff;
+  font-weight: 200;
+  background: #387fee;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  white-space: nowrap;
+  background: url("../product/imgs/toast@2x.png") no-repeat center;
+  background-size: 100% 100%;
+}

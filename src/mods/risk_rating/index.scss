@@ -1,0 +1,147 @@
+/*****************风险评测 style start****************/
+$uiWidth: 75px;
+
+@function pxToRem($px) {
+  @return $px / $uiWidth * 1rem;
+}
+
+.risk-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:pxToRem(90px);;
+  bottom: 0;
+  padding-bottom: pxToRem(60px);
+  overflow: auto;
+  background: #ffffff;
+  .risk-tips {
+    padding: pxToRem(19px) pxToRem(27px);
+    background: #e7f0fe;
+    color: #4389f5;
+  }
+  .rating-list-wrapper {
+    margin-top: pxToRem(40px);
+    .question-wrapper {
+      padding: pxToRem(9px) pxToRem(20px) 0;
+      .question-txt {
+        color: #4389f5;
+        font-size: pxToRem(26px);
+        font-weight: 600;
+      }
+      .answer-li {
+        margin: pxToRem(40px) 0;
+        label {
+          display: inline-block;
+          vertical-align: middle;
+          width: pxToRem(23px);
+          height: pxToRem(23px);
+          position: relative;
+          span, input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: pxToRem(23px);
+            height: pxToRem(23px);
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+          }
+          input[type=radio] {
+            opacity: 0;
+          }
+          span.radio {
+            border: 1px solid #cdcdcd;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+          }
+          span.radio.checked {
+            border: none;
+            background: url("../personal/imgs/radio_checked@3x.png") no-repeat center;
+            background-size: cover;
+          }
+        }
+        .answer-txt {
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: pxToRem(10px);
+          font-size: pxToRem(24px);
+        }
+      }
+    }
+  }
+  .default-tips {
+    padding: 0 pxToRem(20px);
+    color: #959595;
+  }
+  .div-btn {
+    padding: 0 pxToRem(20px);
+    margin-top: pxToRem(62px);
+  }
+}
+
+/*****************风险评测结果 style start****************/
+.riskresult-container {
+  margin-top: pxToRem(5px);
+  .result-score, .result-type {
+    position: relative;
+    padding: pxToRem(30px) pxToRem(40px);
+    overflow: hidden;
+    border-bottom: 1px solid #f9f9f9;
+    p {
+      float: left;
+      width: 70%;
+      color: #2b2b2b;
+      font-size: pxToRem(26px);
+      font-weight: 600;
+    }
+    span {
+      position: absolute;
+      right: pxToRem(39px);
+      color: #308bfe;
+    }
+
+  }
+  .result-score {
+    span {
+      margin-top: pxToRem(17px);
+    }
+  }
+  .result-tips {
+    padding: pxToRem(30px) pxToRem(40px);
+    color: #747474;
+    line-height: pxToRem(40px);
+  }
+  .account-tips {
+    padding: 0 pxToRem(39px);
+    color: #f31046;
+    display: none;
+  }
+  .div-btn {
+    padding: 0 pxToRem(39px);
+    margin-top: pxToRem(126px);
+    text-align: center;
+    overflow: hidden;
+    button {
+      float: left;
+      padding: pxToRem(24px) pxToRem(84px);
+      line-height: 15px;
+      border: 1px solid #308bfe;
+      background: #ffffff;
+      font-size: pxToRem(30px);
+      font-weight: 200;
+      color: #308bfe;
+    }
+    button.investment, button.openaccount {
+      float: right;
+      background: #308bfe;
+      color: #ffffff;
+    }
+    button.openaccount {
+      display: none;
+    }
+
+  }
+}
+
+/*****************风险评测 style end****************/

@@ -1,0 +1,98 @@
+/*****************绑定专员 style start****************/
+$uiWidth: 75px;
+
+@function pxToRem($px) {
+  @return $px / $uiWidth * 1rem;
+}
+
+.assistant-container {
+  top:pxToRem(90px);;
+  margin-top: pxToRem(5px);
+  padding:0 pxToRem(20px);
+  overflow: auto;
+  background: #ffffff;
+
+  .question-wrapper {
+    margin-top: pxToRem(40px);
+    padding: pxToRem(9px) pxToRem(19px) 0;
+    .question-txt {
+      color: #4389f5;
+      font-size: pxToRem(26px);
+      font-weight: 600;
+    }
+    .answer-li {
+      margin: pxToRem(40px) 0;
+      label {
+        display: inline-block;
+        vertical-align: middle;
+        width: pxToRem(23px);
+        height: pxToRem(23px);
+        position: relative;
+        span, input {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: pxToRem(23px);
+          height: pxToRem(23px);
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+        input[type=radio] {
+          opacity: 0;
+        }
+        span.radio {
+          border: 1px solid #cdcdcd;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+        }
+        span.radio.checked {
+          border: none;
+          background: url("../personal/imgs/radio_checked@3x.png") no-repeat center;
+          background-size: cover;
+        }
+      }
+      .answer-txt {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: pxToRem(10px);
+        font-size: pxToRem(24px);
+      }
+      .other-input{
+        width:pxToRem(300px);
+        padding:pxToRem(10px) pxToRem(30px);
+        border-bottom:1px solid #bcbcbc;
+        border-radius: 0;
+      }
+    }
+  }
+
+  /*更换专员*/
+  .change-assistant-wrapper{
+    margin-top: pxToRem(59px);
+    padding:0 pxToRem(20px);
+    .new-assistant{
+      margin-top:pxToRem(60px);
+      span.input-left{
+        position: relative;
+        z-index:2;
+      }
+      .change-input{
+        width:pxToRem(300px);
+        position: relative;
+        left:pxToRem(-10px);
+        padding:pxToRem(10px) pxToRem(30px);
+        border-bottom:1px solid #bcbcbc;
+        border-radius: 0;
+      }
+    }
+
+  }
+  .div-btn {
+    margin-top: pxToRem(95px);
+    //padding:0 pxToRem(20px);
+  }
+}
+
+/*****************绑定专员 style start****************/

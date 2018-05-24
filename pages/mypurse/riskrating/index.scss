@@ -1,0 +1,42 @@
+@import '../../../node_modules/antd-mobile/lib/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/toast/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/modal/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/button/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/icon/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/popover/style/index.css';
+@import "../../../static/html/css/base.css";
+@import '../../../static/html/risk_rating/index.css';
+
+h1{
+    font-weight: normal
+}
+.show{
+    display: block!important;
+}
+.hide{
+    display: none;
+}
+.norisk{
+    background: #f2f2f2!important;
+}
+.risk-text{
+    padding-left: 20px;
+    padding-top: 10px;
+    span{
+        color: #f00;
+    }
+    .risk-tip{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        color: #fff;
+        text-align: center;
+        margin-left: 10px;
+        font-weight: normal;
+        display: inline-block;
+        background: #308bfe;
+    }
+}
+.am-popover-inner-wrapper{
+    padding: 5px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport"/>
+    <title>新新贷-银行存管开户-身份审核提交</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="../base.js"></script>
+</head>
+<body>
+<div class="identity-review-box ">
+    <div class="common-header identity-review-header">
+        <a href="#" class="arrow-left-icon header-left-arrow"></a>
+        <div class="common-header-tit">银行存管开户</div>
+    </div>
+    <div class="open-account-container identity-review-container">
+        <div class="open-account-main">
+            <div class="div-input-wrapper">
+                <div class="input-left"><span>姓名</span></div>
+                <div class="input-border"><input type="text" placeholder="请输入您身份证上的真实姓名"></div>
+            </div>
+            <div class="div-input-wrapper">
+                <div class="input-left"><span>身份证号</span></div>
+                <div class="input-border"><input type="text" placeholder="请输入您的身份证号"></div>
+                <!--提交审核后，审核中的状态，input没有border，给input-border加类名 border-none-->
+            </div>
+        </div>
+        <div class="upload-information-wrapper">
+            <p class="upload-tit">上传身份证资料</p>
+            <div class="upload-information">
+                <div class="upload-item fl">
+                    <div class="identity-card"><input type="file">+</div>
+                    <span>上传本人手持身份证照片正面</span>
+                    <!--未提交身份信息状态的文案：上传本人手持身份证照片正面-->
+                    <!--已提交身份信息状态的文案：照片已上传-->
+                </div>
+                <div class="upload-item pr">
+                    <div class="identity-card"><input type="file"><img src="../openaccount/imgs/identity.png" alt=""></div>
+                    <span>上传本人手持身份证照片反面</span>
+                    <!--未提交身份信息状态的文案：上传本人手持身份证照片反面-->
+                    <!--已提交身份信息状态的文案：照片已上传-->
+                </div>
+            </div>
+            <div class="upload-information-tips">
+                您的身份证信息认证失败，请确认后重新输入并上传手持身 份证正反面照片，提交审核后及时与客服 <a href="tel:4000169521">4000 169 521</a>联系将加快您的审核进度。
+            </div>
+            <!--未提交身份信息状态的文案：您的身份证信息认证失败，请确认后重新输入并上传手持身 份证正反面照片，提交审核后及时与客服4000 169 521联系将加快您的审核进度。-->
+            <!--已提交身份信息状态的文案：您已成功提交身份信息，请及时与客服4000 169 521联系将 加快您的审核进度-->
+        </div>
+        <div class="div-btn"><button class="xxd-xl-btn">提交审核</button></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,372 @@
+/*****************my-xqd page style start****************/
+$uiWidth: 75px;
+
+@function pxToRem($px) {
+  @return $px / $uiWidth * 1rem;
+}
+
+.myxqd-box{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  .myxqd-container{
+    position: absolute;
+    top:pxToRem(100px);
+    bottom: pxToRem(98px);
+    left: 0;
+    right: 0;
+    overflow: auto;
+    margin-bottom:pxToRem(29px);
+    font-weight: 200;
+    /*总资产*/
+    .assets-content{
+      position: relative;
+      padding:pxToRem(26px) pxToRem(30px) pxToRem(36px);
+      //background: -webkit-linear-gradient(to bottom right,#5774ff 20%, #385dff);
+      //background: -moz-linear-gradient(to bottom right,#5774ff 20%, #385dff);
+      //background: -ms-linear-gradient(to bottom right,#5774ff 20%, #385dff);
+      //background: -o-linear-gradient(to bottom right,#5774ff 20%, #385dff);
+      //background: linear-gradient(to bottom right,#5774ff 20%, #385dff);
+      background: url("../mypurse/imgs/blue_bg@2x.png") no-repeat center;
+      background-size: cover;
+      .assets-content-top{
+        position: relative;
+        .account{
+          font-size: pxToRem(24px);
+          font-weight: 200;
+          color: #ffffff;
+          line-height: inherit;
+          img.small-logo{
+            display: inline-block;
+            width:pxToRem(36px);
+            height:pxToRem(36px);
+            -webkit-border-radius: 50%;
+            -moz-border-radius:50%;
+            -ms-border-radius:50%;
+            border-radius:50%;
+            vertical-align: middle;
+            margin-right:pxToRem(17px);
+            //background: url("../mypurse/imgs/small_logo.png") no-repeat center;
+            //background-size: 100% 100%;
+          }
+        }
+        .msg_icon{
+          position: absolute;
+          right:0;
+          width:pxToRem(28px);
+          height:pxToRem(28px);
+          background: url("../mypurse/imgs/message_icon.png") no-repeat center;
+          background-size: 100% 100%;
+          i.red-tips{
+            position: absolute;
+            right:0;
+            top:0;
+            width:pxToRem(12px);
+            height:pxToRem(12px);
+            -webkit-border-radius: 50%;
+            -moz-border-radius:50%;
+            -ms-border-radius:50%;
+            border-radius:50%;
+            background: #ee234b;
+          }
+        }
+      }
+      .total-assets-wrapper{
+        margin:pxToRem(30px) 0 pxToRem(42px);
+        //text-align: center;
+        color: #ffffff;
+        font-size: pxToRem(30px);
+        .total-assets-txt{
+          margin-bottom: pxToRem(25px);
+          position: relative;
+          font-size: pxToRem(26px);
+          i.visible-icon{
+            position: absolute;
+            display: inline-block;
+            width:pxToRem(35px);
+            height:pxToRem(35px);
+            //padding:0 pxToRem(20px);
+            margin:0 pxToRem(20px);
+            vertical-align: middle;
+            background: url("../mypurse/imgs/eye_open_icon.png") no-repeat center;
+            background-size: pxToRem(34px) pxToRem(20px);
+          }
+          i.hide{
+            background: url("../mypurse/imgs/eye_hide_icon.png") no-repeat center;
+            background-size: 100% 100%;
+          }
+        }
+        .total-assets{
+          font-size: pxToRem(48px);
+        }
+      }
+      .total-assets-detail{
+        padding:pxToRem(28px) 0 pxToRem(19px);
+        .item{
+          text-align: center;
+          color: #ffffff;
+          .txt{
+            margin-bottom: pxToRem(19px);
+            font-size: pxToRem(26px);
+          }
+          .number{
+            text-align: left;
+            font-size: pxToRem(28px);
+          }
+        }
+        .item.pl{
+          padding-left:pxToRem(100px);
+        }
+      }
+
+      /*提现充值资产*/
+      .assets-operation-btn{
+        position: absolute;
+        right:pxToRem(70px);
+        bottom:pxToRem(77px);
+        a{
+          display: block;
+          padding:0 pxToRem(30px) 0 pxToRem(20px);
+          font-size: pxToRem(28px);
+          font-weight: 200;
+          color: #ffffff;
+          background: url("../mypurse/imgs/arrow_right_small.png") no-repeat right center;
+          background-size: pxToRem(14px) pxToRem(20px);
+        }
+        a.recharge-btn{
+            margin-bottom: pxToRem(57px);
+        }
+      }
+    }
+
+    .notice-tips{
+      position: relative;
+      padding:pxToRem(10px) 0 pxToRem(10px) pxToRem(78px);
+      background: #a7b8ff url("../mypurse/imgs/notice_icon@3x.png") no-repeat pxToRem(31px) center;
+      background-size: pxToRem(26px) pxToRem(26px);
+      -webkit-box-shadow:  1px 2px 10px rgba(67,71,255,.25);
+      -moz-box-shadow:  1px 2px 10px rgba(67,71,255,.25);
+      box-shadow:  1px 2px 10px rgba(67,71,255,.25);
+      color: #ffffff;
+      font-size: pxToRem(24px);
+    }
+
+    /*红包新新币*/
+    .red-xxb-wrapper {
+      width:100%;
+      padding:pxToRem(28px) 0 pxToRem(19px);
+      .item{
+        text-align: center;
+        font-size: pxToRem(24px);
+        .txt{
+          padding-top: pxToRem(66px);
+          background: url("../mypurse/imgs/xxb@3x.png") no-repeat top 5px center;
+          background-size: pxToRem(44px) pxToRem(44px);
+          color: #000000;
+          font-size: pxToRem(23.87px);
+          position: relative;
+          .query-icon-btn{
+            position: absolute;
+            top:0;
+            width:pxToRem(26px);
+            height:pxToRem(26px);
+            background: url("../mypurse/imgs/query@3x.png") no-repeat center;
+            background-size: pxToRem(25px) pxToRem(25px);
+          }
+        }
+        .txt.red{
+          background: url("../mypurse/imgs/yhj@3x.png") no-repeat top 8px center;
+          background-size: pxToRem(48px) pxToRem(34px);
+        }
+        .number{
+          color: #bdbdbd;
+          font-size: pxToRem(22px);
+        }
+      }
+      .border-r{
+        border-right:1px solid #e4e4e6;
+      }
+    }
+    .display-table{
+      display: table;
+    }
+    .table-item{
+      display: table-cell;
+    }
+    /*列表*/
+    .main-list{
+      .list-item{
+        padding: pxToRem(20px) pxToRem(30px) pxToRem(20px) pxToRem(32px);
+      }
+      .item-icon{
+        display: inline-block;
+        vertical-align: middle;
+        width:pxToRem(48px);
+        height:pxToRem(48px);
+        padding:0;
+      }
+      .record-icon{
+        background: url("../mypurse/imgs/record_icon@3x.png") no-repeat center / contain;
+        background-size: pxToRem(48px) pxToRem(48px);
+      }
+      .user-icon{
+        background: url("../mypurse/imgs/user_icon@3x.png") no-repeat center / contain;
+        background-size: pxToRem(44px) pxToRem(48px);
+      }
+      .feedback-icon{
+        background: url("../mypurse/imgs/feedback_icon@3x.png") no-repeat center / contain;
+        background-size: pxToRem(48px) pxToRem(48px);
+      }
+      .help-icon{
+        background: url("../mypurse/imgs/helpcenter@3x.png") no-repeat center / contain;
+        background-size: pxToRem(44px) pxToRem(44px);
+      }
+      .item-txt{
+        font-weight: 600;
+      }
+    }
+
+    .mb-20{
+      margin-bottom: pxToRem(20px);
+    }
+    .bg-fff{
+      background: #ffffff;
+    }
+  }
+}
+/*****************my-xqd page style end****************/
+
+
+/*********************意见反馈***************************/
+.feedback-container{
+  top:pxToRem(88px);
+  margin-top:pxToRem(10px);
+  .feedback-txt{
+    width:100%;
+    min-height: 220px;
+    padding:pxToRem(39px) pxToRem(29px) pxToRem(39px) pxToRem(19px);
+    margin-bottom:pxToRem(29px);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #ffffff;
+    border:none;
+    outline: none;
+    resize: none;
+
+  }
+  .contact{
+    width:100%;
+    padding:pxToRem(27px) pxToRem(20px);
+    margin-bottom: pxToRem(89px);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #ffffff;
+    border:none;
+  }
+  .div-btn{
+    padding:0 pxToRem(20px);
+  }
+}
+
+.shade-wrapper{
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background: rgba(0,0,0,.66);
+  display: none;
+  .content-wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width:pxToRem(650px);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .alert-content{
+    width:pxToRem(650px);
+    //height:pxToRem(750px);
+    padding:pxToRem(80px) 0;
+    background: -webkit-linear-gradient(top,#5774ff 20%, #385dff);
+    background: -moz-linear-gradient(top,#5774ff 20%, #385dff);
+    background: -ms-linear-gradient(top,#5774ff 20%, #385dff);
+    background: -o-linear-gradient(top,#5774ff 20%, #385dff);
+    background: linear-gradient(top,#5774ff 20%, #385dff);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;;
+    color: #ffffff;
+    text-align: center;
+    .title{
+      height:pxToRem(224px);
+      background: url("../mypurse/imgs/slogan@3x.png") no-repeat center;
+      background-size: pxToRem(520px) pxToRem(224px);
+    }
+    .logo{
+      height:pxToRem(85px);
+      margin:pxToRem(40px) auto;
+      background: url("../mypurse/imgs/xxd_shrb_logo@3x.png") no-repeat center;
+      background-size: pxToRem(270px) pxToRem(85px);
+    }
+    .color{
+      color: #f7f45d;
+      .line{
+        display: inline-block;
+        vertical-align: middle;
+        margin:0 pxToRem(5px);
+        width:pxToRem(37px);
+        border-top:1px solid #f7f45d;
+      }
+    }
+    .bg{
+      margin:pxToRem(35px) auto 0;
+      color: #ffffff;
+      span{
+        margin:0 pxToRem(40px);
+        padding-left:pxToRem(40px);
+        background: url("../mypurse/imgs/check@3x.png") no-repeat left center;
+        background-size: pxToRem(24px) pxToRem(24px);
+        font-weight: 500;
+      }
+    }
+    button{
+      margin-top:pxToRem(60px);
+      padding:pxToRem(24px) pxToRem(160px);
+      color: #385dff;
+      font-weight: 600;
+      background: #ffffff;
+      -webkit-border-radius: 40px;
+      -moz-border-radius: 40px;
+      border-radius: 40px;
+    }
+  }
+  .close-btn{
+    text-align: center;
+    span.line{
+      display: block;
+      width: 1px;
+      height:pxToRem(40px);
+      border-left:1px solid #ffffff;
+      margin:0 auto;
+    }
+    .close{
+      width: pxToRem(52px);
+      height:pxToRem(52px);
+      margin:0 auto;
+      background: url("../mypurse/imgs/circle_close@3x.png") no-repeat center;
+      background-size: pxToRem(52px) pxToRem(52px);
+
+    }
+  }
+}
+.shade-wrapper.block{
+  display: block;
+}

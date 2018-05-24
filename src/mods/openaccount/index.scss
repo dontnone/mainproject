@@ -1,0 +1,429 @@
+/*********************开户实名认证 style start***********************/
+$uiWidth: 75px;
+@function pxToRem($px) {
+  @return $px / $uiWidth * 1rem;
+}
+
+.open-account-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.open-account-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: pxToRem(88px);
+  bottom: 0;
+  overflow: auto;
+  background: #ffffff;
+  margin-top: 1px;
+  .open-account-main {
+    padding: pxToRem(40px) pxToRem(20px) pxToRem(66px);
+    background: #ffffff;
+    .div-input-wrapper {
+      position: relative;
+      margin-left: pxToRem(30px);
+      margin-bottom: pxToRem(37px);
+      overflow: hidden;
+      .input-left {
+        float: left;
+        margin-top: pxToRem(15px);
+        font-size: 14px;
+        font-weight: 600;
+        color: #3a3a3a;
+        span {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        i.star {
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 10px;
+          color: #ff0000;
+        }
+      }
+      .input-border {
+        margin-left: pxToRem(163px);
+        padding: pxToRem(17px) pxToRem(30px);
+        border: 1px solid #ececec;
+        input {
+          width: 100%;
+        }
+      }
+    }
+
+    .checkbox-wrapper {
+      margin-left: pxToRem(30px);
+      label {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: pxToRem(30px);
+        height: pxToRem(30px);
+        span.checkbox {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: pxToRem(30px);
+          height: pxToRem(30px);
+          background: url("../register/imgs/check_box@3x.png") no-repeat center;
+          background-size: pxToRem(30px) pxToRem(30px);
+        }
+        span.checked {
+          background: url("../register/imgs/checked@3x.png") no-repeat center;
+          background-size: pxToRem(30px) pxToRem(30px);
+        }
+        input[type=checkbox] {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: pxToRem(30px);
+          height: pxToRem(30px);
+          opacity: 0;
+        }
+      }
+      p {
+        display: inline-block;
+        margin-left: pxToRem(11px);
+        vertical-align: middle;
+        font-size: 13px;
+        color: #5f5f5f;
+        a {
+          color: #3682ed;
+        }
+      }
+    }
+
+    .div-btn {
+      margin-top: pxToRem(77px);
+    }
+  }
+  .open-account-prompt {
+    border-top: pxToRem(10px) solid #f9f9f9;
+    background: #ffffff;
+    padding: pxToRem(36px) pxToRem(20px);
+    .prompt {
+      padding-top: pxToRem(24px);
+      font-size: 12px;
+      color: #2b2b2b;
+      //border: 1px solid #3682ed;
+      //border-bottom-style: dashed;
+      .prompt-tit {
+        margin-bottom: pxToRem(38px);
+        text-align: center;
+        font-weight: 600;
+        color: #808080;
+        .line {
+          display: inline-block;
+          vertical-align: middle;
+          width: pxToRem(102px);
+          height: 2px;;
+          margin: 0 pxToRem(20px);
+          background: -webkit-linear-gradient(to right, #ffffff 20%, #b4b4b4);
+          background: -moz-linear-gradient(to right, #ffffff 20%, #b4b4b4);
+          background: -ms-linear-gradient(to right, #ffffff 20%, #b4b4b4);
+          background: -o-linear-gradient(to right, #ffffff 20%, #b4b4b4);
+          background: linear-gradient(to right, #ffffff 20%, #b4b4b4);
+        }
+        .toright-line {
+          background: -webkit-linear-gradient(to left, #ffffff 20%, #b4b4b4);
+          background: -moz-linear-gradient(to left, #ffffff 20%, #b4b4b4);
+          background: -ms-linear-gradient(to left, #ffffff 20%, #b4b4b4);
+          background: -o-linear-gradient(to left, #ffffff 20%, #b4b4b4);
+          background: linear-gradient(to left, #ffffff 20%, #b4b4b4);
+        }
+      }
+    }
+
+  }
+}
+
+/********************开户实名认证 page style end************************/
+
+/********************提交审核 style start************************/
+.identity-review-box, .account-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  .identity-review-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: pxToRem(88px);
+    bottom: 0;
+    overflow: auto;
+    background: #ffffff;
+    margin-top: pxToRem(10px);
+    .open-account-main {
+      padding-bottom: 0;
+      .input-border {
+        margin-left: pxToRem(140px);
+      }
+      .input-border.border-none{
+        border:none;
+      }
+    }
+    .upload-information-wrapper {
+      .upload-tit {
+        padding: pxToRem(19px);
+        line-height: 14px;
+        font-size: 14px;
+        color: #2b2b2b;
+        background: #f9f9f9;
+      }
+      .upload-information {
+        padding: pxToRem(40px) pxToRem(37px) pxToRem(42px);
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        .upload-item {
+          flex: 1;
+          -webkit-flex: 1;
+          -ms-flex: 1;
+          .identity-card {
+            width: pxToRem(210px);
+            height: pxToRem(210px);
+            margin: 0 auto pxToRem(30px);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            color: #dbd9db;
+            font-size: pxToRem(58px);
+            position: relative;
+            input[type=file] {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 2.8rem;
+              height: 2.8rem;
+              opacity: 0;
+              z-index: 3;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          span {
+            color: #aaa8ab;
+          }
+        }
+        .upload-item.fl {
+
+        }
+        .upload-item.pr {
+
+          margin-left: pxToRem(40px);
+        }
+      }
+      .upload-information-tips {
+        padding: 0 pxToRem(37px);
+        color: #aaa8ab;
+        line-height: pxToRem(34px);
+        text-indent: pxToRem(60px);
+        background: url("../openaccount/imgs/notice_icon@3x.png") no-repeat pxToRem(54px) top;
+        background-size: pxToRem(27px) pxToRem(27px);
+        a {
+          color: #3682ed;
+          text-decoration: underline;
+        }
+      }
+    }
+    .div-btn {
+      padding: 0 pxToRem(37px) pxToRem(125px);
+      margin-top: pxToRem(100px);
+      button:disabled {
+        background: #95b9f1;
+      }
+    }
+    .border-bt {
+      border-bottom: 1px solid #e1e1e1;
+    }
+  }
+}
+
+/********************提交审核 style end************************/
+
+/********************已开户 style start************************/
+.account-container {
+  .div-input-wrapper {
+    position: relative;
+    padding: pxToRem(40px) pxToRem(37px);
+    .input-left {
+      font-weight: 600;
+    }
+    input {
+      position: absolute;
+      left: pxToRem(173px);
+      width: 70%;
+      color: #2b2b2b;
+    }
+    //input:disabled {
+    //  color: #dbd9db;
+    //}
+  }
+
+  .card-wrapper {
+    padding: 0 pxToRem(37px);
+    border-top: pxToRem(10px) solid #f9f9f9;
+    .bank-card-tips {
+      padding: pxToRem(30px) 0;
+      color: #4389f5;
+      span {
+        color: #4389f5;
+        margin: 0 pxToRem(10px);
+      }
+    }
+  }
+}
+
+/********************已开户 style end************************/
+
+/********************开户结果 style start************************/
+.openaccount-result-container {
+  background: #ffffff;
+  .openaccount-result-top {
+    position: relative;
+    padding: 0 0 pxToRem(144px);
+    .manage-organization {
+      text-align: left;
+      color: #ffffff;
+      font-size: 12px;
+      line-height: pxToRem(40px);
+      padding: pxToRem(40px) pxToRem(20px);
+    }
+    .circle-box {
+      position: relative;
+      width: pxToRem(210px);
+      height: pxToRem(210px);
+      margin: pxToRem(53px) auto 0;
+      text-align: center;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      background: url("../openaccount/imgs/openaccount_circle.png") no-repeat center bottom;
+      background-size: 100%;
+      span {
+        position: absolute;
+        left: 0;
+        bottom: pxToRem(31px);
+        width: 100%;
+        font-size: 13px;
+        color: #ffffff;
+      }
+    }
+    .circle-box.success-box {
+      background: url("../openaccount/imgs/openaccount_circle.png") no-repeat center bottom;
+      background-size: 100%;
+    }
+    .circle-box.fail-box {
+      background: url("../openaccount/imgs/openaccount_circle.png") no-repeat center bottom;
+      background-size: 100%;
+    }
+    .wave-bg {
+      position: absolute;
+      bottom: pxToRem(-65px);
+      width: 100%;
+      height: pxToRem(250px);
+      background: url("../recharge/imgs/wave.png") no-repeat center bottom;
+      background-size: 100%;
+    }
+  }
+  .openaccount-result-top.success-bg {
+    background: -webkit-linear-gradient(to right, #57bdff 20%, #367dff);
+    background: -moz-linear-gradient(to right, #57bdff 20%, #367dff);
+    background: -ms-linear-gradient(to right, #57bdff 20%, #367dff);
+    background: -o-linear-gradient(to right, #57bdff 20%, #367dff);
+    background: linear-gradient(to right, #57bdff 20%, #367dff);
+  }
+  .openaccount-result-top.fail-bg {
+    background: -webkit-linear-gradient(to right, #ff8457 20%, #ff3739);
+    background: -moz-linear-gradient(to right, #ff8457 20%, #ff3739);
+    background: -ms-linear-gradient(to right, #ff8457 20%, #ff3739);
+    background: -o-linear-gradient(to right, #ff8457 20%, #ff3739);
+    background: linear-gradient(to right, #ff8457 20%, #ff3739);
+  }
+  .openaccount-result-txt {
+    margin-top: pxToRem(50px);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    background: -webkit-linear-gradient(to right, #57beff 30%, #367dff);
+    background: -moz-linear-gradient(to right, #57beff 30%, #367dff);
+    background: -ms-linear-gradient(to right, #57beff 30%, #367dff);
+    background: -o-linear-gradient(to right, #57beff 30%, #367dff);
+    background: linear-gradient(to right, #57beff 30%, #367dff);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    position: relative;
+    z-index: 2;
+  }
+  .openaccount-result-txt.fail-txt {
+    background: -webkit-linear-gradient(to right, #ff8457 20%, #ff3739);
+    background: -moz-linear-gradient(to right, #ff8457 20%, #ff3739);
+    background: -ms-linear-gradient(to right, #ff8457 20%, #ff3739);
+    background: -o-linear-gradient(to right, #ff8457 20%, #ff3739);
+    background: linear-gradient(to right, #ff8457 20%, #ff3739);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+  }
+  .fail-tips {
+    margin-top: pxToRem(39px);
+    padding: 0 pxToRem(110px);
+    text-align: center;
+    color: #8f8f8f;
+    display: none;
+  }
+  .fail-tips.block{
+    display: block;
+  }
+  .div-btn {
+    margin-top: pxToRem(148px);
+    padding: 0 pxToRem(40px);
+    text-align: center;
+    display: none;
+    button {
+      padding: pxToRem(24px) pxToRem(101px);
+      border: 1px solid #4389f5;
+      line-height: 15px;
+      font-size: 15px;
+      font-weight: 200;
+    }
+  }
+  .fail-btn {
+    margin-top: pxToRem(48px);
+    button.onrecharge {
+      float: left;
+      background: #4389f5;
+      color: #ffffff;
+    }
+  }
+  .div-btn.block {
+    display: block;
+  }
+}
+
+/********************开户结果 style end************************/
+
+
